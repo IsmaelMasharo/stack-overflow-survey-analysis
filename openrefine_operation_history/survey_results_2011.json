@@ -1,455 +1,420 @@
 [
-    {
-      "op": "core/column-addition",
-      "engineConfig": {
-        "facets": [],
-        "mode": "row-based"
-      },
-      "baseColumnName": "What is your involvement in purchasing? You can choose more than 1.",
-      "expression": "join ([cells['What is your involvement in purchasing? You can choose more than 1.'].value,cells['Column'].value,cells['Column2'].value,cells['Column3'].value,cells['Column4'].value,cells['Column5'].value,cells['Column6'].value],';')",
-      "onError": "keep-original",
-      "newColumnName": "purchase_involvement",
-      "columnInsertIndex": 9,
-      "description": "Create column purchase_involvement at index 9 based on column What is your involvement in purchasing? You can choose more than 1. using expression join ([cells['What is your involvement in purchasing? You can choose more than 1.'].value,cells['Column'].value,cells['Column2'].value,cells['Column3'].value,cells['Column4'].value,cells['Column5'].value,cells['Column6'].value],';')"
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
     },
-    {
-      "op": "core/column-reorder",
-      "columnNames": [
-        "What Country or Region do you live in?",
-        "Which US State or Territory do you live in?",
-        "How old are you?",
-        "How many years of IT/Programming experience do you have?",
-        "How would you best describe the industry you work in?",
-        "Which best describes the size of your company?",
-        "Which of the following best describes your occupation?",
-        "How likely is it that a recommendation you make will be acted upon?",
-        "purchase_involvement",
-        "What types of purchases are you involved in?",
-        "Column7",
-        "Column8",
-        "Column9",
-        "Column10",
-        "Column11",
-        "What is your budget for outside expenditures (hardware, software, consulting, etc) for 2011?",
-        "Column12",
-        "Column13",
-        "Column14",
-        "Column15",
-        "Column16",
-        "Column17",
-        "Column18",
-        "What type of project are you developing?",
-        "Which languages are you proficient in?",
-        "Column19",
-        "Column20",
-        "Column21",
-        "Column22",
-        "Column23",
-        "Column24",
-        "Column25",
-        "Column26",
-        "Column27",
-        "Column28",
-        "Column29",
-        "Column30",
-        "What operating system do you use the most?",
-        "Please rate your job/career satisfaction",
-        "Including bonus, what is your annual compensation in USD?",
-        "Which technology products do you own? (You can choose more than one)",
-        "Column31",
-        "Column32",
-        "Column33",
-        "Column34",
-        "Column35",
-        "Column36",
-        "Column37",
-        "Column38",
-        "Column39",
-        "Column40",
-        "Column41",
-        "Column42",
-        "Column43",
-        "Column44",
-        "Column45",
-        "Column46",
-        "In the last 12 months, how much money have you spent on personal technology-related purchases?",
-        "Which of our sites do you frequent most?"
-      ],
-      "description": "Reorder columns"
+    "baseColumnName": "What is your involvement in purchasing? You can choose more than 1.",
+    "expression": "join ([cells['What is your involvement in purchasing? You can choose more than 1.'].value,cells['Column'].value,cells['Column2'].value,cells['Column3'].value,cells['Column4'].value,cells['Column5'].value,cells['Column6'].value],';')",
+    "onError": "keep-original",
+    "newColumnName": "purchase_involvement",
+    "columnInsertIndex": 9,
+    "description": "Create column purchase_involvement at index 9 based on column What is your involvement in purchasing? You can choose more than 1. using expression join ([cells['What is your involvement in purchasing? You can choose more than 1.'].value,cells['Column'].value,cells['Column2'].value,cells['Column3'].value,cells['Column4'].value,cells['Column5'].value,cells['Column6'].value],';')"
+  },
+  {
+    "op": "core/column-reorder",
+    "columnNames": [
+      "What Country or Region do you live in?",
+      "Which US State or Territory do you live in?",
+      "How old are you?",
+      "How many years of IT/Programming experience do you have?",
+      "How would you best describe the industry you work in?",
+      "Which best describes the size of your company?",
+      "Which of the following best describes your occupation?",
+      "How likely is it that a recommendation you make will be acted upon?",
+      "purchase_involvement",
+      "What types of purchases are you involved in?",
+      "Column7",
+      "Column8",
+      "Column9",
+      "Column10",
+      "Column11",
+      "What is your budget for outside expenditures (hardware, software, consulting, etc) for 2011?",
+      "Column12",
+      "Column13",
+      "Column14",
+      "Column15",
+      "Column16",
+      "Column17",
+      "Column18",
+      "What type of project are you developing?",
+      "Which languages are you proficient in?",
+      "Column19",
+      "Column20",
+      "Column21",
+      "Column22",
+      "Column23",
+      "Column24",
+      "Column25",
+      "Column26",
+      "Column27",
+      "Column28",
+      "Column29",
+      "Column30",
+      "What operating system do you use the most?",
+      "Please rate your job/career satisfaction",
+      "Including bonus, what is your annual compensation in USD?",
+      "Which technology products do you own? (You can choose more than one)",
+      "Column31",
+      "Column32",
+      "Column33",
+      "Column34",
+      "Column35",
+      "Column36",
+      "Column37",
+      "Column38",
+      "Column39",
+      "Column40",
+      "Column41",
+      "Column42",
+      "Column43",
+      "Column44",
+      "Column45",
+      "Column46",
+      "In the last 12 months, how much money have you spent on personal technology-related purchases?",
+      "Which of our sites do you frequent most?"
+    ],
+    "description": "Reorder columns"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
     },
-    {
-      "op": "core/column-addition",
-      "engineConfig": {
-        "facets": [],
-        "mode": "row-based"
-      },
-      "baseColumnName": "What types of purchases are you involved in?",
-      "expression": "join ([cells['What types of purchases are you involved in?'].value,cells['Column7'].value,cells['Column8'].value,cells['Column9'].value,cells['Column10'].value,cells['Column11'].value],';')",
-      "onError": "keep-original",
-      "newColumnName": "purchase_involvement_type",
-      "columnInsertIndex": 10,
-      "description": "Create column purchase_involvement_type at index 10 based on column What types of purchases are you involved in? using expression join ([cells['What types of purchases are you involved in?'].value,cells['Column7'].value,cells['Column8'].value,cells['Column9'].value,cells['Column10'].value,cells['Column11'].value],';')"
+    "baseColumnName": "What types of purchases are you involved in?",
+    "expression": "join ([cells['What types of purchases are you involved in?'].value,cells['Column7'].value,cells['Column8'].value,cells['Column9'].value,cells['Column10'].value,cells['Column11'].value],';')",
+    "onError": "keep-original",
+    "newColumnName": "purchase_involvement_type",
+    "columnInsertIndex": 10,
+    "description": "Create column purchase_involvement_type at index 10 based on column What types of purchases are you involved in? using expression join ([cells['What types of purchases are you involved in?'].value,cells['Column7'].value,cells['Column8'].value,cells['Column9'].value,cells['Column10'].value,cells['Column11'].value],';')"
+  },
+  {
+    "op": "core/column-reorder",
+    "columnNames": [
+      "What Country or Region do you live in?",
+      "Which US State or Territory do you live in?",
+      "How old are you?",
+      "How many years of IT/Programming experience do you have?",
+      "How would you best describe the industry you work in?",
+      "Which best describes the size of your company?",
+      "Which of the following best describes your occupation?",
+      "How likely is it that a recommendation you make will be acted upon?",
+      "purchase_involvement",
+      "purchase_involvement_type",
+      "What is your budget for outside expenditures (hardware, software, consulting, etc) for 2011?",
+      "Column12",
+      "Column13",
+      "Column14",
+      "Column15",
+      "Column16",
+      "Column17",
+      "Column18",
+      "What type of project are you developing?",
+      "Which languages are you proficient in?",
+      "Column19",
+      "Column20",
+      "Column21",
+      "Column22",
+      "Column23",
+      "Column24",
+      "Column25",
+      "Column26",
+      "Column27",
+      "Column28",
+      "Column29",
+      "Column30",
+      "What operating system do you use the most?",
+      "Please rate your job/career satisfaction",
+      "Including bonus, what is your annual compensation in USD?",
+      "Which technology products do you own? (You can choose more than one)",
+      "Column31",
+      "Column32",
+      "Column33",
+      "Column34",
+      "Column35",
+      "Column36",
+      "Column37",
+      "Column38",
+      "Column39",
+      "Column40",
+      "Column41",
+      "Column42",
+      "Column43",
+      "Column44",
+      "Column45",
+      "Column46",
+      "In the last 12 months, how much money have you spent on personal technology-related purchases?",
+      "Which of our sites do you frequent most?"
+    ],
+    "description": "Reorder columns"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
     },
-    {
-      "op": "core/column-reorder",
-      "columnNames": [
-        "What Country or Region do you live in?",
-        "Which US State or Territory do you live in?",
-        "How old are you?",
-        "How many years of IT/Programming experience do you have?",
-        "How would you best describe the industry you work in?",
-        "Which best describes the size of your company?",
-        "Which of the following best describes your occupation?",
-        "How likely is it that a recommendation you make will be acted upon?",
-        "purchase_involvement",
-        "purchase_involvement_type",
-        "What is your budget for outside expenditures (hardware, software, consulting, etc) for 2011?",
-        "Column12",
-        "Column13",
-        "Column14",
-        "Column15",
-        "Column16",
-        "Column17",
-        "Column18",
-        "What type of project are you developing?",
-        "Which languages are you proficient in?",
-        "Column19",
-        "Column20",
-        "Column21",
-        "Column22",
-        "Column23",
-        "Column24",
-        "Column25",
-        "Column26",
-        "Column27",
-        "Column28",
-        "Column29",
-        "Column30",
-        "What operating system do you use the most?",
-        "Please rate your job/career satisfaction",
-        "Including bonus, what is your annual compensation in USD?",
-        "Which technology products do you own? (You can choose more than one)",
-        "Column31",
-        "Column32",
-        "Column33",
-        "Column34",
-        "Column35",
-        "Column36",
-        "Column37",
-        "Column38",
-        "Column39",
-        "Column40",
-        "Column41",
-        "Column42",
-        "Column43",
-        "Column44",
-        "Column45",
-        "Column46",
-        "In the last 12 months, how much money have you spent on personal technology-related purchases?",
-        "Which of our sites do you frequent most?"
-      ],
-      "description": "Reorder columns"
+    "baseColumnName": "What is your budget for outside expenditures (hardware, software, consulting, etc) for 2011?",
+    "expression": "join ([cells['What is your budget for outside expenditures (hardware, software, consulting, etc) for 2011?'].value,cells['Column12'].value,cells['Column13'].value,cells['Column14'].value,cells['Column15'].value,cells['Column16'].value,cells['Column17'].value,cells['Column18'].value],';')",
+    "onError": "keep-original",
+    "newColumnName": "outside_expenditures_budget",
+    "columnInsertIndex": 11,
+    "description": "Create column outside_expenditures_budget at index 11 based on column What is your budget for outside expenditures (hardware, software, consulting, etc) for 2011? using expression join ([cells['What is your budget for outside expenditures (hardware, software, consulting, etc) for 2011?'].value,cells['Column12'].value,cells['Column13'].value,cells['Column14'].value,cells['Column15'].value,cells['Column16'].value,cells['Column17'].value,cells['Column18'].value],';')"
+  },
+  {
+    "op": "core/column-reorder",
+    "columnNames": [
+      "What Country or Region do you live in?",
+      "Which US State or Territory do you live in?",
+      "How old are you?",
+      "How many years of IT/Programming experience do you have?",
+      "How would you best describe the industry you work in?",
+      "Which best describes the size of your company?",
+      "Which of the following best describes your occupation?",
+      "How likely is it that a recommendation you make will be acted upon?",
+      "purchase_involvement",
+      "purchase_involvement_type",
+      "outside_expenditures_budget",
+      "What type of project are you developing?",
+      "Which languages are you proficient in?",
+      "Column19",
+      "Column20",
+      "Column21",
+      "Column22",
+      "Column23",
+      "Column24",
+      "Column25",
+      "Column26",
+      "Column27",
+      "Column28",
+      "Column29",
+      "Column30",
+      "What operating system do you use the most?",
+      "Please rate your job/career satisfaction",
+      "Including bonus, what is your annual compensation in USD?",
+      "Which technology products do you own? (You can choose more than one)",
+      "Column31",
+      "Column32",
+      "Column33",
+      "Column34",
+      "Column35",
+      "Column36",
+      "Column37",
+      "Column38",
+      "Column39",
+      "Column40",
+      "Column41",
+      "Column42",
+      "Column43",
+      "Column44",
+      "Column45",
+      "Column46",
+      "In the last 12 months, how much money have you spent on personal technology-related purchases?",
+      "Which of our sites do you frequent most?"
+    ],
+    "description": "Reorder columns"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
     },
-    {
-      "op": "core/column-addition",
-      "engineConfig": {
-        "facets": [],
-        "mode": "row-based"
-      },
-      "baseColumnName": "What is your budget for outside expenditures (hardware, software, consulting, etc) for 2011?",
-      "expression": "join ([cells['What is your budget for outside expenditures (hardware, software, consulting, etc) for 2011?'].value,cells['Column12'].value,cells['Column13'].value,cells['Column14'].value,cells['Column15'].value,cells['Column16'].value,cells['Column17'].value,cells['Column18'].value],';')",
-      "onError": "keep-original",
-      "newColumnName": "outside_expenditures_budget",
-      "columnInsertIndex": 11,
-      "description": "Create column outside_expenditures_budget at index 11 based on column What is your budget for outside expenditures (hardware, software, consulting, etc) for 2011? using expression join ([cells['What is your budget for outside expenditures (hardware, software, consulting, etc) for 2011?'].value,cells['Column12'].value,cells['Column13'].value,cells['Column14'].value,cells['Column15'].value,cells['Column16'].value,cells['Column17'].value,cells['Column18'].value],';')"
+    "baseColumnName": "Which languages are you proficient in?",
+    "expression": "join ([cells['Which languages are you proficient in?'].value,cells['Column19'].value,cells['Column20'].value,cells['Column21'].value,cells['Column22'].value,cells['Column23'].value,cells['Column24'].value,cells['Column25'].value,cells['Column26'].value,cells['Column27'].value,cells['Column28'].value,cells['Column29'].value,cells['Column30'].value],';')",
+    "onError": "keep-original",
+    "newColumnName": "programming_languages_proficient_at",
+    "columnInsertIndex": 13,
+    "description": "Create column programming_languages_proficient_at at index 13 based on column Which languages are you proficient in? using expression join ([cells['Which languages are you proficient in?'].value,cells['Column19'].value,cells['Column20'].value,cells['Column21'].value,cells['Column22'].value,cells['Column23'].value,cells['Column24'].value,cells['Column25'].value,cells['Column26'].value,cells['Column27'].value,cells['Column28'].value,cells['Column29'].value,cells['Column30'].value],';')"
+  },
+  {
+    "op": "core/column-reorder",
+    "columnNames": [
+      "What Country or Region do you live in?",
+      "Which US State or Territory do you live in?",
+      "How old are you?",
+      "How many years of IT/Programming experience do you have?",
+      "How would you best describe the industry you work in?",
+      "Which best describes the size of your company?",
+      "Which of the following best describes your occupation?",
+      "How likely is it that a recommendation you make will be acted upon?",
+      "purchase_involvement",
+      "purchase_involvement_type",
+      "outside_expenditures_budget",
+      "What type of project are you developing?",
+      "programming_languages_proficient_at",
+      "What operating system do you use the most?",
+      "Please rate your job/career satisfaction",
+      "Including bonus, what is your annual compensation in USD?",
+      "Which technology products do you own? (You can choose more than one)",
+      "Column31",
+      "Column32",
+      "Column33",
+      "Column34",
+      "Column35",
+      "Column36",
+      "Column37",
+      "Column38",
+      "Column39",
+      "Column40",
+      "Column41",
+      "Column42",
+      "Column43",
+      "Column44",
+      "Column45",
+      "Column46",
+      "In the last 12 months, how much money have you spent on personal technology-related purchases?",
+      "Which of our sites do you frequent most?"
+    ],
+    "description": "Reorder columns"
+  },
+  {
+    "op": "core/column-reorder",
+    "columnNames": [
+      "What Country or Region do you live in?",
+      "Which US State or Territory do you live in?",
+      "How old are you?",
+      "How many years of IT/Programming experience do you have?",
+      "How would you best describe the industry you work in?",
+      "Which best describes the size of your company?",
+      "Which of the following best describes your occupation?",
+      "How likely is it that a recommendation you make will be acted upon?",
+      "purchase_involvement",
+      "purchase_involvement_type",
+      "outside_expenditures_budget",
+      "What type of project are you developing?",
+      "programming_languages_proficient_at",
+      "What operating system do you use the most?",
+      "Please rate your job/career satisfaction",
+      "Including bonus, what is your annual compensation in USD?",
+      "tech_products_own",
+      "In the last 12 months, how much money have you spent on personal technology-related purchases?",
+      "Which of our sites do you frequent most?"
+    ],
+    "description": "Reorder columns"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "What Country or Region do you live in?",
+    "newColumnName": "country",
+    "description": "Rename column What Country or Region do you live in? to country"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Which US State or Territory do you live in?",
+    "newColumnName": "usa_state",
+    "description": "Rename column Which US State or Territory do you live in? to usa_state"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "How old are you?",
+    "newColumnName": "age",
+    "description": "Rename column How old are you? to age"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "How many years of IT/Programming experience do you have?",
+    "newColumnName": "years_experience",
+    "description": "Rename column How many years of IT/Programming experience do you have? to years_experience"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "How would you best describe the industry you work in?",
+    "newColumnName": "industry",
+    "description": "Rename column How would you best describe the industry you work in? to industry"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Which best describes the size of your company?",
+    "newColumnName": "company_size",
+    "description": "Rename column Which best describes the size of your company? to company_size"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Which of the following best describes your occupation?",
+    "newColumnName": "occupation",
+    "description": "Rename column Which of the following best describes your occupation? to occupation"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "How likely is it that a recommendation you make will be acted upon?",
+    "newColumnName": "recommendation_likely_acted_upon",
+    "description": "Rename column How likely is it that a recommendation you make will be acted upon? to recommendation_likely_acted_upon"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "What type of project are you developing?",
+    "newColumnName": "project_type",
+    "description": "Rename column What type of project are you developing? to project_type"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "What operating system do you use the most?",
+    "newColumnName": "OS_most_used",
+    "description": "Rename column What operating system do you use the most? to OS_most_used"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Please rate your job/career satisfaction",
+    "newColumnName": "job_satisfaction",
+    "description": "Rename column Please rate your job/career satisfaction to job_satisfaction"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Including bonus, what is your annual compensation in USD?",
+    "newColumnName": "annual_compensation_USD",
+    "description": "Rename column Including bonus, what is your annual compensation in USD? to annual_compensation_USD"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "In the last 12 months, how much money have you spent on personal technology-related purchases?",
+    "newColumnName": "techn_related_purchases_last_year",
+    "description": "Rename column In the last 12 months, how much money have you spent on personal technology-related purchases? to techn_related_purchases_last_year"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Which of our sites do you frequent most?",
+    "newColumnName": "stackoverflow_sites_most_visited",
+    "description": "Rename column Which of our sites do you frequent most? to stackoverflow_sites_most_visited"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "OS_most_used",
+    "newColumnName": "OS",
+    "description": "Rename column OS_most_used to OS"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "annual_compensation_USD",
+    "newColumnName": "annual_compensation",
+    "description": "Rename column annual_compensation_USD to annual_compensation"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "programming_languages_proficient_at",
+    "newColumnName": "programming_languages",
+    "description": "Rename column programming_languages_proficient_at to programming_languages"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
     },
-    {
-      "op": "core/column-reorder",
-      "columnNames": [
-        "What Country or Region do you live in?",
-        "Which US State or Territory do you live in?",
-        "How old are you?",
-        "How many years of IT/Programming experience do you have?",
-        "How would you best describe the industry you work in?",
-        "Which best describes the size of your company?",
-        "Which of the following best describes your occupation?",
-        "How likely is it that a recommendation you make will be acted upon?",
-        "purchase_involvement",
-        "purchase_involvement_type",
-        "outside_expenditures_budget",
-        "What type of project are you developing?",
-        "Which languages are you proficient in?",
-        "Column19",
-        "Column20",
-        "Column21",
-        "Column22",
-        "Column23",
-        "Column24",
-        "Column25",
-        "Column26",
-        "Column27",
-        "Column28",
-        "Column29",
-        "Column30",
-        "What operating system do you use the most?",
-        "Please rate your job/career satisfaction",
-        "Including bonus, what is your annual compensation in USD?",
-        "Which technology products do you own? (You can choose more than one)",
-        "Column31",
-        "Column32",
-        "Column33",
-        "Column34",
-        "Column35",
-        "Column36",
-        "Column37",
-        "Column38",
-        "Column39",
-        "Column40",
-        "Column41",
-        "Column42",
-        "Column43",
-        "Column44",
-        "Column45",
-        "Column46",
-        "In the last 12 months, how much money have you spent on personal technology-related purchases?",
-        "Which of our sites do you frequent most?"
-      ],
-      "description": "Reorder columns"
-    },
-    {
-      "op": "core/column-addition",
-      "engineConfig": {
-        "facets": [],
-        "mode": "row-based"
-      },
-      "baseColumnName": "Which languages are you proficient in?",
-      "expression": "join ([cells['Which languages are you proficient in?'].value,cells['Column19'].value,cells['Column20'].value,cells['Column21'].value,cells['Column22'].value,cells['Column23'].value,cells['Column24'].value,cells['Column25'].value,cells['Column26'].value,cells['Column27'].value,cells['Column28'].value,cells['Column29'].value,cells['Column30'].value],';')",
-      "onError": "keep-original",
-      "newColumnName": "programming_languages_proficient_at",
-      "columnInsertIndex": 13,
-      "description": "Create column programming_languages_proficient_at at index 13 based on column Which languages are you proficient in? using expression join ([cells['Which languages are you proficient in?'].value,cells['Column19'].value,cells['Column20'].value,cells['Column21'].value,cells['Column22'].value,cells['Column23'].value,cells['Column24'].value,cells['Column25'].value,cells['Column26'].value,cells['Column27'].value,cells['Column28'].value,cells['Column29'].value,cells['Column30'].value],';')"
-    },
-    {
-      "op": "core/column-reorder",
-      "columnNames": [
-        "What Country or Region do you live in?",
-        "Which US State or Territory do you live in?",
-        "How old are you?",
-        "How many years of IT/Programming experience do you have?",
-        "How would you best describe the industry you work in?",
-        "Which best describes the size of your company?",
-        "Which of the following best describes your occupation?",
-        "How likely is it that a recommendation you make will be acted upon?",
-        "purchase_involvement",
-        "purchase_involvement_type",
-        "outside_expenditures_budget",
-        "What type of project are you developing?",
-        "programming_languages_proficient_at",
-        "What operating system do you use the most?",
-        "Please rate your job/career satisfaction",
-        "Including bonus, what is your annual compensation in USD?",
-        "Which technology products do you own? (You can choose more than one)",
-        "Column31",
-        "Column32",
-        "Column33",
-        "Column34",
-        "Column35",
-        "Column36",
-        "Column37",
-        "Column38",
-        "Column39",
-        "Column40",
-        "Column41",
-        "Column42",
-        "Column43",
-        "Column44",
-        "Column45",
-        "Column46",
-        "In the last 12 months, how much money have you spent on personal technology-related purchases?",
-        "Which of our sites do you frequent most?"
-      ],
-      "description": "Reorder columns"
-    },
-    {
-      "op": "core/column-reorder",
-      "columnNames": [
-        "What Country or Region do you live in?",
-        "Which US State or Territory do you live in?",
-        "How old are you?",
-        "How many years of IT/Programming experience do you have?",
-        "How would you best describe the industry you work in?",
-        "Which best describes the size of your company?",
-        "Which of the following best describes your occupation?",
-        "How likely is it that a recommendation you make will be acted upon?",
-        "purchase_involvement",
-        "purchase_involvement_type",
-        "outside_expenditures_budget",
-        "What type of project are you developing?",
-        "programming_languages_proficient_at",
-        "What operating system do you use the most?",
-        "Please rate your job/career satisfaction",
-        "Including bonus, what is your annual compensation in USD?",
-        "tech_products_own",
-        "In the last 12 months, how much money have you spent on personal technology-related purchases?",
-        "Which of our sites do you frequent most?"
-      ],
-      "description": "Reorder columns"
-    },
-    {
-      "op": "core/column-rename",
-      "oldColumnName": "What Country or Region do you live in?",
-      "newColumnName": "country",
-      "description": "Rename column What Country or Region do you live in? to country"
-    },
-    {
-      "op": "core/column-rename",
-      "oldColumnName": "Which US State or Territory do you live in?",
-      "newColumnName": "usa_state",
-      "description": "Rename column Which US State or Territory do you live in? to usa_state"
-    },
-    {
-      "op": "core/column-rename",
-      "oldColumnName": "How old are you?",
-      "newColumnName": "age",
-      "description": "Rename column How old are you? to age"
-    },
-    {
-      "op": "core/column-rename",
-      "oldColumnName": "How many years of IT/Programming experience do you have?",
-      "newColumnName": "years_experience",
-      "description": "Rename column How many years of IT/Programming experience do you have? to years_experience"
-    },
-    {
-      "op": "core/column-rename",
-      "oldColumnName": "How would you best describe the industry you work in?",
-      "newColumnName": "industry",
-      "description": "Rename column How would you best describe the industry you work in? to industry"
-    },
-    {
-      "op": "core/column-rename",
-      "oldColumnName": "Which best describes the size of your company?",
-      "newColumnName": "company_size",
-      "description": "Rename column Which best describes the size of your company? to company_size"
-    },
-    {
-      "op": "core/column-rename",
-      "oldColumnName": "Which of the following best describes your occupation?",
-      "newColumnName": "occupation",
-      "description": "Rename column Which of the following best describes your occupation? to occupation"
-    },
-    {
-      "op": "core/column-rename",
-      "oldColumnName": "How likely is it that a recommendation you make will be acted upon?",
-      "newColumnName": "recommendation_likely_acted_upon",
-      "description": "Rename column How likely is it that a recommendation you make will be acted upon? to recommendation_likely_acted_upon"
-    },
-    {
-      "op": "core/column-rename",
-      "oldColumnName": "What type of project are you developing?",
-      "newColumnName": "project_type",
-      "description": "Rename column What type of project are you developing? to project_type"
-    },
-    {
-      "op": "core/column-rename",
-      "oldColumnName": "What operating system do you use the most?",
-      "newColumnName": "OS_most_used",
-      "description": "Rename column What operating system do you use the most? to OS_most_used"
-    },
-    {
-      "op": "core/column-rename",
-      "oldColumnName": "Please rate your job/career satisfaction",
-      "newColumnName": "job_satisfaction",
-      "description": "Rename column Please rate your job/career satisfaction to job_satisfaction"
-    },
-    {
-      "op": "core/column-rename",
-      "oldColumnName": "Including bonus, what is your annual compensation in USD?",
-      "newColumnName": "annual_compensation_USD",
-      "description": "Rename column Including bonus, what is your annual compensation in USD? to annual_compensation_USD"
-    },
-    {
-      "op": "core/column-rename",
-      "oldColumnName": "In the last 12 months, how much money have you spent on personal technology-related purchases?",
-      "newColumnName": "techn_related_purchases_last_year",
-      "description": "Rename column In the last 12 months, how much money have you spent on personal technology-related purchases? to techn_related_purchases_last_year"
-    },
-    {
-      "op": "core/column-rename",
-      "oldColumnName": "Which of our sites do you frequent most?",
-      "newColumnName": "stackoverflow_sites_most_visited",
-      "description": "Rename column Which of our sites do you frequent most? to stackoverflow_sites_most_visited"
-    },
-    {
-      "op": "core/column-rename",
-      "oldColumnName": "OS_most_used",
-      "newColumnName": "OS",
-      "description": "Rename column OS_most_used to OS"
-    },
-    {
-      "op": "core/column-rename",
-      "oldColumnName": "annual_compensation_USD",
-      "newColumnName": "annual_compensation",
-      "description": "Rename column annual_compensation_USD to annual_compensation"
-    },
-    {
-      "op": "core/column-rename",
-      "oldColumnName": "programming_languages_proficient_at",
-      "newColumnName": "programming_languages",
-      "description": "Rename column programming_languages_proficient_at to programming_languages"
-    },
-    {
-      "op": "core/mass-edit",
-      "engineConfig": {
-        "facets": [],
-        "mode": "row-based"
-      },
-      "columnName": "stackoverflow_sites_most_visited",
-      "expression": "value",
-      "edits": [
-        {
-          "from": [
-            "None"
-          ],
-          "fromBlank": false,
-          "fromError": false,
-          "to": ""
-        }
-      ],
-      "description": "Mass edit cells in column stackoverflow_sites_most_visited"
-    },
-    {
-      "op": "core/column-removal",
-      "columnName": "usa_state",
-      "description": "Remove column usa_state"
-    },
-    {
-      "op": "core/column-removal",
-      "columnName": "recommendation_likely_acted_upon",
-      "description": "Remove column recommendation_likely_acted_upon"
-    },
-    {
-      "op": "core/column-removal",
-      "columnName": "purchase_involvement",
-      "description": "Remove column purchase_involvement"
-    },
-    {
-      "op": "core/column-removal",
-      "columnName": "purchase_involvement_type",
-      "description": "Remove column purchase_involvement_type"
-    },
-    {
-      "op": "core/column-removal",
-      "columnName": "outside_expenditures_budget",
-      "description": "Remove column outside_expenditures_budget"
-    },
-    {
-      "op": "core/column-removal",
-      "columnName": "techn_related_purchases_last_year",
-      "description": "Remove column techn_related_purchases_last_year"
-    },
-    {
-      "op": "core/column-removal",
-      "columnName": "stackoverflow_sites_most_visited",
-      "description": "Remove column stackoverflow_sites_most_visited"
-    }
-  ]
+    "columnName": "stackoverflow_sites_most_visited",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "None"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": ""
+      }
+    ],
+    "description": "Mass edit cells in column stackoverflow_sites_most_visited"
+  }
+]
