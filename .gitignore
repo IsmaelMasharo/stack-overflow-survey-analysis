@@ -34,6 +34,7 @@ dmypy.json
 # ignore due to github max file size policy
 stack_overflow_datasets
 stack_overflow_survey_results
+*.csv
 
 # mac
 .DS_Store
