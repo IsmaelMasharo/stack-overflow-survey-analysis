@@ -217,85 +217,6 @@
     "description": "Reorder columns"
   },
   {
-    "op": "core/column-addition",
-    "engineConfig": {
-      "facets": [],
-      "mode": "row-based"
-    },
-    "baseColumnName": "Which languages are you proficient in?",
-    "expression": "join ([cells['Which languages are you proficient in?'].value,cells['Column19'].value,cells['Column20'].value,cells['Column21'].value,cells['Column22'].value,cells['Column23'].value,cells['Column24'].value,cells['Column25'].value,cells['Column26'].value,cells['Column27'].value,cells['Column28'].value,cells['Column29'].value,cells['Column30'].value],';')",
-    "onError": "keep-original",
-    "newColumnName": "programming_languages_proficient_at",
-    "columnInsertIndex": 13,
-    "description": "Create column programming_languages_proficient_at at index 13 based on column Which languages are you proficient in? using expression join ([cells['Which languages are you proficient in?'].value,cells['Column19'].value,cells['Column20'].value,cells['Column21'].value,cells['Column22'].value,cells['Column23'].value,cells['Column24'].value,cells['Column25'].value,cells['Column26'].value,cells['Column27'].value,cells['Column28'].value,cells['Column29'].value,cells['Column30'].value],';')"
-  },
-  {
-    "op": "core/column-reorder",
-    "columnNames": [
-      "What Country or Region do you live in?",
-      "Which US State or Territory do you live in?",
-      "How old are you?",
-      "How many years of IT/Programming experience do you have?",
-      "How would you best describe the industry you work in?",
-      "Which best describes the size of your company?",
-      "Which of the following best describes your occupation?",
-      "How likely is it that a recommendation you make will be acted upon?",
-      "purchase_involvement",
-      "purchase_involvement_type",
-      "outside_expenditures_budget",
-      "What type of project are you developing?",
-      "programming_languages_proficient_at",
-      "What operating system do you use the most?",
-      "Please rate your job/career satisfaction",
-      "Including bonus, what is your annual compensation in USD?",
-      "Which technology products do you own? (You can choose more than one)",
-      "Column31",
-      "Column32",
-      "Column33",
-      "Column34",
-      "Column35",
-      "Column36",
-      "Column37",
-      "Column38",
-      "Column39",
-      "Column40",
-      "Column41",
-      "Column42",
-      "Column43",
-      "Column44",
-      "Column45",
-      "Column46",
-      "In the last 12 months, how much money have you spent on personal technology-related purchases?",
-      "Which of our sites do you frequent most?"
-    ],
-    "description": "Reorder columns"
-  },
-  {
-    "op": "core/column-reorder",
-    "columnNames": [
-      "What Country or Region do you live in?",
-      "Which US State or Territory do you live in?",
-      "How old are you?",
-      "How many years of IT/Programming experience do you have?",
-      "How would you best describe the industry you work in?",
-      "Which best describes the size of your company?",
-      "Which of the following best describes your occupation?",
-      "How likely is it that a recommendation you make will be acted upon?",
-      "purchase_involvement",
-      "purchase_involvement_type",
-      "outside_expenditures_budget",
-      "What type of project are you developing?",
-      "programming_languages_proficient_at",
-      "What operating system do you use the most?",
-      "Please rate your job/career satisfaction",
-      "Including bonus, what is your annual compensation in USD?",
-      "tech_products_own",
-      "In the last 12 months, how much money have you spent on personal technology-related purchases?",
-      "Which of our sites do you frequent most?"
-    ],
-    "description": "Reorder columns"
-  },
-  {
     "op": "core/column-rename",
     "oldColumnName": "What Country or Region do you live in?",
     "newColumnName": "country",
@@ -392,29 +313,110 @@
     "description": "Rename column annual_compensation_USD to annual_compensation"
   },
   {
-    "op": "core/column-rename",
-    "oldColumnName": "programming_languages_proficient_at",
-    "newColumnName": "programming_languages",
-    "description": "Rename column programming_languages_proficient_at to programming_languages"
-  },
-  {
-    "op": "core/mass-edit",
+    "op": "core/column-addition",
     "engineConfig": {
       "facets": [],
       "mode": "row-based"
     },
-    "columnName": "stackoverflow_sites_most_visited",
-    "expression": "value",
-    "edits": [
-      {
-        "from": [
-          "None"
-        ],
-        "fromBlank": false,
-        "fromError": false,
-        "to": ""
-      }
+    "baseColumnName": "Which languages are you proficient in?",
+    "expression": "join ([cells['Which languages are you proficient in?'].value,cells['Column19'].value,cells['Column20'].value,cells['Column21'].value,cells['Column22'].value,cells['Column23'].value,cells['Column24'].value,cells['Column25'].value,cells['Column26'].value,cells['Column27'].value,cells['Column28'].value,cells['Column29'].value],';')",
+    "onError": "keep-original",
+    "newColumnName": "programming_languages",
+    "columnInsertIndex": 13,
+    "description": "Create column programming_languages at index 13 based on column Which languages are you proficient in? using expression join ([cells['Which languages are you proficient in?'].value,cells['Column19'].value,cells['Column20'].value,cells['Column21'].value,cells['Column22'].value,cells['Column23'].value,cells['Column24'].value,cells['Column25'].value,cells['Column26'].value,cells['Column27'].value,cells['Column28'].value,cells['Column29'].value],';')"
+  },
+  {
+    "op": "core/column-reorder",
+    "columnNames": [
+      "country",
+      "usa_state",
+      "age",
+      "years_experience",
+      "industry",
+      "company_size",
+      "occupation",
+      "recommendation_likely_acted_upon",
+      "purchase_involvement",
+      "purchase_involvement_type",
+      "outside_expenditures_budget",
+      "project_type",
+      "programming_languages",
+      "Column30",
+      "OS",
+      "job_satisfaction",
+      "annual_compensation",
+      "Which technology products do you own? (You can choose more than one)",
+      "Column31",
+      "Column32",
+      "Column33",
+      "Column34",
+      "Column35",
+      "Column36",
+      "Column37",
+      "Column38",
+      "Column39",
+      "Column40",
+      "Column41",
+      "Column42",
+      "Column43",
+      "Column44",
+      "Column45",
+      "Column46",
+      "techn_related_purchases_last_year",
+      "stackoverflow_sites_most_visited"
     ],
-    "description": "Mass edit cells in column stackoverflow_sites_most_visited"
+    "description": "Reorder columns"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Column30",
+    "newColumnName": "programming_languages_oher",
+    "description": "Rename column Column30 to programming_languages_oher"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Which technology products do you own? (You can choose more than one)",
+    "expression": "join ([cells['Which technology products do you own? (You can choose more than one)'].value,cells['Column31'].value,cells['Column32'].value,cells['Column33'].value,cells['Column34'].value,cells['Column35'].value,cells['Column36'].value,cells['Column37'].value,cells['Column38'].value,cells['Column39'].value,cells['Column40'].value,cells['Column41'].value,cells['Column42'].value,cells['Column43'].value,cells['Column44'].value,cells['Column45'].value],';')",
+    "onError": "keep-original",
+    "newColumnName": "tech_products_own",
+    "columnInsertIndex": 18,
+    "description": "Create column tech_products_own at index 18 based on column Which technology products do you own? (You can choose more than one) using expression join ([cells['Which technology products do you own? (You can choose more than one)'].value,cells['Column31'].value,cells['Column32'].value,cells['Column33'].value,cells['Column34'].value,cells['Column35'].value,cells['Column36'].value,cells['Column37'].value,cells['Column38'].value,cells['Column39'].value,cells['Column40'].value,cells['Column41'].value,cells['Column42'].value,cells['Column43'].value,cells['Column44'].value,cells['Column45'].value],';')"
+  },
+  {
+    "op": "core/column-reorder",
+    "columnNames": [
+      "country",
+      "usa_state",
+      "age",
+      "years_experience",
+      "industry",
+      "company_size",
+      "occupation",
+      "recommendation_likely_acted_upon",
+      "purchase_involvement",
+      "purchase_involvement_type",
+      "outside_expenditures_budget",
+      "project_type",
+      "programming_languages",
+      "programming_languages_oher",
+      "OS",
+      "job_satisfaction",
+      "annual_compensation",
+      "tech_products_own",
+      "Column46",
+      "techn_related_purchases_last_year",
+      "stackoverflow_sites_most_visited"
+    ],
+    "description": "Reorder columns"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Column46",
+    "newColumnName": "tech_products_own_other",
+    "description": "Rename column Column46 to tech_products_own_other"
   }
 ]
