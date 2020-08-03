@@ -1,0 +1,4509 @@
+[
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "programming_languages_other",
+      "expression": "value.trim()",
+      "onError": "keep-original",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column programming_languages_other using expression value.trim()"
+    },
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "programming_languages_other",
+      "expression": "value.replace(/\\s+/,' ')",
+      "onError": "keep-original",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column programming_languages_other using expression value.replace(/\\s+/,' ')"
+    },
+    {
+      "op": "core/multivalued-cell-split",
+      "columnName": "programming_languages_other",
+      "keyColumnName": "year",
+      "mode": "separator",
+      "separator": ",",
+      "regex": false,
+      "description": "Split multi-valued cells in column programming_languages_other"
+    },
+    {
+      "op": "core/multivalued-cell-split",
+      "columnName": "programming_languages_other",
+      "keyColumnName": "year",
+      "mode": "separator",
+      "separator": ";",
+      "regex": false,
+      "description": "Split multi-valued cells in column programming_languages_other"
+    },
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "programming_languages_other",
+      "expression": "value.trim()",
+      "onError": "keep-original",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column programming_languages_other using expression value.trim()"
+    },
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "programming_languages_other",
+      "expression": "jython:return value.replace(\"(\", \" \").replace(\")\", \" \")",
+      "onError": "keep-original",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column programming_languages_other using expression jython:return value.replace(\"(\", \" \").replace(\")\", \" \")"
+    },
+    {
+      "op": "core/multivalued-cell-split",
+      "columnName": "programming_languages_other",
+      "keyColumnName": "year",
+      "mode": "separator",
+      "separator": " ",
+      "regex": false,
+      "description": "Split multi-valued cells in column programming_languages_other"
+    },
+    {
+      "op": "core/mass-edit",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "programming_languages_other",
+      "expression": "value",
+      "edits": [
+        {
+          "from": [
+            "PL/SQL",
+            "plsql",
+            "PLSQL",
+            "pl/sql",
+            "Pl/SQL",
+            "Pl/sql"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "PLSQL"
+        }
+      ],
+      "description": "Mass edit cells in column programming_languages_other"
+    },
+    {
+      "op": "core/multivalued-cell-split",
+      "columnName": "programming_languages_other",
+      "keyColumnName": "year",
+      "mode": "separator",
+      "separator": "/",
+      "regex": false,
+      "description": "Split multi-valued cells in column programming_languages_other"
+    },
+    {
+      "op": "core/mass-edit",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "programming_languages_other",
+      "expression": "value",
+      "edits": [
+        {
+          "from": [
+            "",
+            "&",
+            ":",
+            "-",
+            "!",
+            "$",
+            "+",
+            "...",
+            "....",
+            ":-",
+            "=",
+            ">",
+            "?"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        },
+        {
+          "from": [
+            "ASP.NET",
+            "asp.net",
+            "ASP.Net",
+            "Asp.Net",
+            "Asp.net",
+            "ASP.net",
+            "ASp.net",
+            "Asp.NET"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ASP.NET"
+        },
+        {
+          "from": [
+            "VB.NET",
+            "vb.net",
+            "VB.Net",
+            "VB.net",
+            "Vb.net",
+            "Vb.Net",
+            "VB.NET!",
+            "VB.Net!"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "VB.NET"
+        },
+        {
+          "from": [
+            "VBScript",
+            "vbscript",
+            "VBscript",
+            "VbScript",
+            "vb-script",
+            "vbScript"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "VB"
+        },
+        {
+          "from": [
+            "Node.js",
+            "Node.JS",
+            "NodeJS",
+            "Nodejs",
+            "node.js"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Node.js"
+        },
+        {
+          "from": [
+            ".NET",
+            ".net",
+            ".Net",
+            ".NET.",
+            "Net"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ".NET"
+        },
+        {
+          "from": [
+            "jQuery",
+            "jquery",
+            "JQuery",
+            "Jquery",
+            "JQUERY"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "jQuery"
+        },
+        {
+          "from": [
+            "AngularJS",
+            "angularjs",
+            "Angular.js",
+            "angular.js",
+            "angularJS"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "AngularJS"
+        },
+        {
+          "from": [
+            "VB",
+            "vb",
+            "Vb",
+            "VB.",
+            "vb."
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "VB"
+        },
+        {
+          "from": [
+            "HTML",
+            "html",
+            "HTML?",
+            "Html",
+            "html...?"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "HTML"
+        },
+        {
+          "from": [
+            "Matlab",
+            "MATLAB",
+            "matlab",
+            "MatLab",
+            "MATLAb"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Matlab"
+        },
+        {
+          "from": [
+            "KnockoutJS",
+            "knockout.js",
+            "knockoutjs",
+            "Knockout.js"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "KnockoutJS"
+        },
+        {
+          "from": [
+            "ActionScript",
+            "Actionscript",
+            "actionscript",
+            "ACTIONSCRIPT"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ActionScript"
+        },
+        {
+          "from": [
+            "Clojure",
+            "clojure",
+            "CLojure",
+            "clojure."
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Clojure"
+        },
+        {
+          "from": [
+            "Objective-C",
+            "objective-c",
+            "Objective-c",
+            "ObjectiveC"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Objective-C"
+        },
+        {
+          "from": [
+            "LabVIEW",
+            "Labview",
+            "LabView",
+            "labview"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "LabVIEW"
+        },
+        {
+          "from": [
+            "NoSQL",
+            "NOSQL",
+            "nosql",
+            "NoSql"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "NoSQL"
+        },
+        {
+          "from": [
+            "CoffeeScript",
+            "Coffeescript",
+            "coffeescript",
+            "COFFEESCRIPT"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "CoffeeScript"
+        },
+        {
+          "from": [
+            "language",
+            "Language",
+            "language.",
+            "language?"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        },
+        {
+          "from": [
+            "Fortran",
+            "FORTRAN",
+            "fortran",
+            "FORTRAN."
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Fortran"
+        },
+        {
+          "from": [
+            "OCaml",
+            "Ocaml",
+            "ocaml",
+            "oCaml"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "OCaml"
+        },
+        {
+          "from": [
+            "MySQL",
+            "mysql",
+            "MySql",
+            "MySQL..."
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "MySQL"
+        },
+        {
+          "from": [
+            "ExtJS",
+            "extjs",
+            "ExtJs",
+            "ext.js"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ExtJS"
+        },
+        {
+          "from": [
+            "Bash",
+            "bash",
+            "BASH",
+            "[ba]sh"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Bash"
+        },
+        {
+          "from": [
+            "HTML5",
+            "html5",
+            "HTML-5"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "HTML5"
+        },
+        {
+          "from": [
+            "XML",
+            "xml",
+            "Xml"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "XML"
+        },
+        {
+          "from": [
+            "ZSH",
+            "zsh",
+            "Zsh"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ZSH"
+        },
+        {
+          "from": [
+            "a",
+            "A",
+            "Ã"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        },
+        {
+          "from": [
+            "XQuery",
+            "xquery",
+            "XQUERY"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "XQuery"
+        },
+        {
+          "from": [
+            ":-P",
+            ":P",
+            "p"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        },
+        {
+          "from": [
+            "X++",
+            "X",
+            "x++"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "X++"
+        },
+        {
+          "from": [
+            "Ada",
+            "ADA",
+            "ada"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Ada"
+        },
+        {
+          "from": [
+            "Lisp",
+            "lisp",
+            "LISP"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Lisp"
+        },
+        {
+          "from": [
+            "Codeigniter",
+            "CodeIgniter",
+            "codeigniter"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Codeigniter"
+        },
+        {
+          "from": [
+            "APEX",
+            "Apex",
+            "apex"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "APEX"
+        },
+        {
+          "from": [
+            "Sass",
+            "sass",
+            "SASS"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Sass"
+        },
+        {
+          "from": [
+            "PhoneGap",
+            "phonegap",
+            "Phonegap"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "PhoneGap"
+        },
+        {
+          "from": [
+            "Grails",
+            "grails",
+            "GRAILS"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Grails"
+        },
+        {
+          "from": [
+            "LotusScript",
+            "Lotusscript",
+            "lotusscript"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "LotusScript"
+        },
+        {
+          "from": [
+            "Basic",
+            "BASIC",
+            "basic"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "VB"
+        },
+        {
+          "from": [
+            "Coffescript",
+            "coffescript",
+            "CoffeScript"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Coffescript"
+        },
+        {
+          "from": [
+            "scripting",
+            "Scripting",
+            "SCRIPTING"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        },
+        {
+          "from": [
+            "MongoDB",
+            "mongodb",
+            "Mongodb"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "MongoDB"
+        },
+        {
+          "from": [
+            "XSLT",
+            "xslt",
+            "Xslt"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "XSLT"
+        },
+        {
+          "from": [
+            "CSS",
+            "css",
+            "Css"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "CSS"
+        },
+        {
+          "from": [
+            "AJAX",
+            "ajax",
+            "Ajax"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "AJAX"
+        },
+        {
+          "from": [
+            "Java",
+            "java",
+            "JAVA"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Java"
+        },
+        {
+          "from": [
+            "Javascript",
+            "JavaScript",
+            "javascript"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Javascript"
+        },
+        {
+          "from": [
+            "ASP",
+            "asp",
+            ".ASP"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ASP"
+        },
+        {
+          "from": [
+            "Perl",
+            "perl",
+            "PERL"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Perl"
+        },
+        {
+          "from": [
+            "awk",
+            "Awk",
+            "AWK"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "awk"
+        },
+        {
+          "from": [
+            "PowerShell",
+            "Powershell",
+            "powershell"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "PowerShell"
+        },
+        {
+          "from": [
+            "WiX",
+            "wix",
+            "Wix"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "WiX"
+        },
+        {
+          "from": [
+            "Lua",
+            "lua",
+            "LUA"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Lua"
+        },
+        {
+          "from": [
+            "Stack",
+            "stack",
+            "stack:"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        },
+        {
+          "from": [
+            "JavaFX",
+            "Javafx",
+            "javafx"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "JavaFX"
+        },
+        {
+          "from": [
+            "ABAP",
+            "Abap",
+            "abap"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ABAP"
+        },
+        {
+          "from": [
+            "REXX",
+            "rexx",
+            "Rexx"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "REXX"
+        },
+        {
+          "from": [
+            "MooTools",
+            "Mootools",
+            "mootools"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "MooTools"
+        },
+        {
+          "from": [
+            "TypeScript",
+            "Typescript",
+            "typescript"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "TypeScript"
+        },
+        {
+          "from": [
+            "ColdFusion",
+            "Coldfusion",
+            "coldfusion"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ColdFusion"
+        },
+        {
+          "from": [
+            "COBOL",
+            "Cobol",
+            "cobol"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "COBOL"
+        },
+        {
+          "from": [
+            "BackboneJs",
+            "Backbone.js",
+            "backbone.js"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "BackboneJs"
+        },
+        {
+          "from": [
+            "Delphi",
+            "delphi",
+            "DELPHI"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Delphi"
+        },
+        {
+          "from": [
+            "XPath",
+            "xpath",
+            "XPATH"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "XPath"
+        },
+        {
+          "from": [
+            "CSS3",
+            "css3",
+            "CSS-3"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "CSS3"
+        },
+        {
+          "from": [
+            "VBA",
+            "vba",
+            "VBA!"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "VBA"
+        },
+        {
+          "from": [
+            "AutoIT",
+            "AutoIt",
+            "autoit"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "AutoIT"
+        },
+        {
+          "from": [
+            "Pascal",
+            "pascal",
+            "PASCAL"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Pascal"
+        },
+        {
+          "from": [
+            "SharePoint",
+            "Sharepoint",
+            "sharepoint"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "SharePoint"
+        },
+        {
+          "from": [
+            "out",
+            "out!",
+            "out!!!"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        },
+        {
+          "from": [
+            "Scala",
+            "scala",
+            "SCala"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Scala"
+        },
+        {
+          "from": [
+            "GIT",
+            "git",
+            "git++"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "GIT"
+        },
+        {
+          "from": [
+            "Tcl",
+            "TCL",
+            "tcl"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Tcl"
+        },
+        {
+          "from": [
+            "Dataflex",
+            "DataFlex"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Dataflex"
+        },
+        {
+          "from": [
+            "Visual",
+            "visual"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "VB"
+        },
+        {
+          "from": [
+            "4GL",
+            "4gl"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "4GL"
+        },
+        {
+          "from": [
+            "EmberJS",
+            "Ember.js"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "EmberJS"
+        },
+        {
+          "from": [
+            "Vim",
+            "vim"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Vim"
+        },
+        {
+          "from": [
+            "LOLCODE",
+            "LoLcode"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "LOLCODE"
+        },
+        {
+          "from": [
+            "Google",
+            "google"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Google"
+        },
+        {
+          "from": [
+            "Cocoa",
+            "cocoa"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Cocoa"
+        },
+        {
+          "from": [
+            "WIldFly",
+            "Wildfly"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "WIldFly"
+        },
+        {
+          "from": [
+            "Object",
+            "object"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        },
+        {
+          "from": [
+            "Brainfuck",
+            "brainfuck"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Brainfuck"
+        },
+        {
+          "from": [
+            "Haskell",
+            "haskell"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Haskell"
+        },
+        {
+          "from": [
+            "E",
+            "É"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        },
+        {
+          "from": [
+            "F#",
+            "f#"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "F#"
+        },
+        {
+          "from": [
+            "I",
+            "i"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        },
+        {
+          "from": [
+            "ABL",
+            "abl"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ABL"
+        },
+        {
+          "from": [
+            "J",
+            "j"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        },
+        {
+          "from": [
+            "Qlikview",
+            "qlikview"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Qlikview"
+        },
+        {
+          "from": [
+            "the",
+            "The"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        },
+        {
+          "from": [
+            "R",
+            "r"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "R"
+        },
+        {
+          "from": [
+            "RDF",
+            "rdf"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "RDF"
+        },
+        {
+          "from": [
+            "god",
+            "God"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        },
+        {
+          "from": [
+            "scss",
+            "SCSS"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "scss"
+        },
+        {
+          "from": [
+            "Spring",
+            "spring"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Spring"
+        },
+        {
+          "from": [
+            "others",
+            "others."
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        },
+        {
+          "from": [
+            "UniBasic",
+            "Unibasic"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "UniBasic"
+        },
+        {
+          "from": [
+            "it's",
+            "It's"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        },
+        {
+          "from": [
+            "list",
+            "list?"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        },
+        {
+          "from": [
+            "Verilog",
+            "verilog"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Verilog"
+        },
+        {
+          "from": [
+            "Shell",
+            "shell"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Shell"
+        },
+        {
+          "from": [
+            "PrimeFaces",
+            "Primefaces"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "PrimeFaces"
+        },
+        {
+          "from": [
+            "Guys",
+            "guys"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Guys"
+        },
+        {
+          "from": [
+            "XSL",
+            "xsl"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "XSL"
+        },
+        {
+          "from": [
+            "Engine",
+            "engine"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Engine"
+        },
+        {
+          "from": [
+            "REBOL",
+            "Rebol"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "REBOL"
+        },
+        {
+          "from": [
+            "mobile",
+            "Mobile"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "mobile"
+        },
+        {
+          "from": [
+            "Prolog",
+            "prolog"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Prolog"
+        },
+        {
+          "from": [
+            "Force.com",
+            "force.com"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Force.com"
+        },
+        {
+          "from": [
+            "sybase",
+            "Sybase"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "sybase"
+        },
+        {
+          "from": [
+            "Pike",
+            "pike"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Pike"
+        },
+        {
+          "from": [
+            "Forth",
+            "forth"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Forth"
+        },
+        {
+          "from": [
+            "Script",
+            "script"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        },
+        {
+          "from": [
+            "Silverlight",
+            "silverlight"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Silverlight"
+        },
+        {
+          "from": [
+            "AIR",
+            "air"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "AIR"
+        },
+        {
+          "from": [
+            "Rails",
+            "rails"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Rails"
+        },
+        {
+          "from": [
+            "Framework",
+            "framework"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        },
+        {
+          "from": [
+            "x86",
+            "X86"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        },
+        {
+          "from": [
+            "CMake",
+            "cmake"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "CMake"
+        },
+        {
+          "from": [
+            "PHP",
+            "php"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "PHP"
+        },
+        {
+          "from": [
+            "Gosu",
+            "gosu"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Gosu"
+        },
+        {
+          "from": [
+            "Logic",
+            "logic"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Logic"
+        },
+        {
+          "from": [
+            "Smalltalk",
+            "smalltalk"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Smalltalk"
+        },
+        {
+          "from": [
+            "GWT",
+            "gwt"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "GWT"
+        },
+        {
+          "from": [
+            "CQ5",
+            "cq5"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "CQ5"
+        },
+        {
+          "from": [
+            "etc.",
+            "et.c."
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        },
+        {
+          "from": [
+            "Haxe",
+            "haXe"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Haxe"
+        },
+        {
+          "from": [
+            "LESS",
+            "less"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "LESS"
+        },
+        {
+          "from": [
+            "PL1",
+            "pl1"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "PL1"
+        },
+        {
+          "from": [
+            "unix",
+            "Unix"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "unix"
+        },
+        {
+          "from": [
+            "CouchDB",
+            "couchdb"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "CouchDB"
+        },
+        {
+          "from": [
+            "CQL",
+            "Cql"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "CQL"
+        },
+        {
+          "from": [
+            "and",
+            "And"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        },
+        {
+          "from": [
+            "design",
+            "Design"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        },
+        {
+          "from": [
+            "CRM",
+            "crm"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "CRM"
+        },
+        {
+          "from": [
+            "ant",
+            "Ant"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ant"
+        },
+        {
+          "from": [
+            "FileMaker",
+            "Filemaker"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "FileMaker"
+        },
+        {
+          "from": [
+            "English",
+            "english"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        },
+        {
+          "from": [
+            "API",
+            "api"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "API"
+        },
+        {
+          "from": [
+            "APL",
+            "Apl"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "APL"
+        },
+        {
+          "from": [
+            "App",
+            "app"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        },
+        {
+          "from": [
+            "EXT",
+            "Ext"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "EXT"
+        },
+        {
+          "from": [
+            "Unity3D",
+            "Unity3d"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Unity3D"
+        },
+        {
+          "from": [
+            "Groovy",
+            "groovy"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Groovy"
+        },
+        {
+          "from": [
+            "Toolkit",
+            "toolkit"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        },
+        {
+          "from": [
+            "Flash",
+            "flash"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Flash"
+        },
+        {
+          "from": [
+            "AS3",
+            "as3"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "AS3"
+        },
+        {
+          "from": [
+            "RPG-400",
+            "rpg400"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "RPG-400"
+        },
+        {
+          "from": [
+            "Hibernate",
+            "hibernate"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Hibernate"
+        },
+        {
+          "from": [
+            "ARM",
+            "arm"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ARM"
+        },
+        {
+          "from": [
+            "WebSockets",
+            "Websockets"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "WebSockets"
+        },
+        {
+          "from": [
+            "PPC",
+            "ppc"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "PPC"
+        },
+        {
+          "from": [
+            "languages",
+            "\"languages\"!"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        },
+        {
+          "from": [
+            "Services",
+            "services"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        },
+        {
+          "from": [
+            "HLSL",
+            "hlsl"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "HLSL"
+        },
+        {
+          "from": [
+            "Gradle",
+            "gradle"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Gradle"
+        },
+        {
+          "from": [
+            "Classic",
+            "classic"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        },
+        {
+          "from": [
+            "ASM",
+            "asm"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ASM"
+        },
+        {
+          "from": [
+            "ServiceStack",
+            "servicestack"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ServiceStack"
+        },
+        {
+          "from": [
+            "Obj-c",
+            "obj-c"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Objective-c"
+        },
+        {
+          "from": [
+            "NAnt",
+            "nant"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "NAnt"
+        },
+        {
+          "from": [
+            "those",
+            "Those"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        },
+        {
+          "from": [
+            "octave",
+            "Octave"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "octave"
+        },
+        {
+          "from": [
+            "Batch",
+            "batch"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Batch"
+        },
+        {
+          "from": [
+            "technologies",
+            "technologies:"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        },
+        {
+          "from": [
+            "SignalR",
+            "signalr"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "SignalR"
+        },
+        {
+          "from": [
+            "Android",
+            "android"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Android"
+        },
+        {
+          "from": [
+            "Erlang",
+            "erlang"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Erlang"
+        },
+        {
+          "from": [
+            "not",
+            "Not"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        },
+        {
+          "from": [
+            "Assembler",
+            "assembler"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Assembler"
+        },
+        {
+          "from": [
+            "XHTML",
+            "xhtml"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "XHTML"
+        },
+        {
+          "from": [
+            "AutoLISP",
+            "AutoLisp"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "AutoLISP"
+        },
+        {
+          "from": [
+            "Redis",
+            "redis"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Redis"
+        },
+        {
+          "from": [
+            "WCF",
+            "wcf"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "WCF"
+        },
+        {
+          "from": [
+            "FoxPro",
+            "foxpro"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "FoxPro"
+        },
+        {
+          "from": [
+            "Tibco",
+            "tibco"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Tibco"
+        },
+        {
+          "from": [
+            "Scilab",
+            "SciLab"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Scilab"
+        },
+        {
+          "from": [
+            "Dojo",
+            "dojo"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Dojo"
+        },
+        {
+          "from": [
+            "Web",
+            "web"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Web"
+        },
+        {
+          "from": [
+            "YII",
+            "yii"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "YII"
+        },
+        {
+          "from": [
+            "more",
+            "more.."
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        },
+        {
+          "from": [
+            "Bourne",
+            "bourne"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Bourne"
+        },
+        {
+          "from": [
+            "choice",
+            "choice?"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        },
+        {
+          "from": [
+            "ActionScript3",
+            "actionscript-3"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ActionScript3"
+        },
+        {
+          "from": [
+            "WebFOCUS",
+            "Webfocus"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "WebFOCUS"
+        },
+        {
+          "from": [
+            "Common-Lisp",
+            "common-lisp"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Common-Lisp"
+        },
+        {
+          "from": [
+            "Eclipse",
+            "eclipse"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Eclipse"
+        },
+        {
+          "from": [
+            "PeopleSoft",
+            "Peoplesoft"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "PeopleSoft"
+        },
+        {
+          "from": [
+            "elisp",
+            "Elisp"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "elisp"
+        },
+        {
+          "from": [
+            "SOAP",
+            "soap..."
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "SOAP"
+        },
+        {
+          "from": [
+            "Titanium",
+            "titanium"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Titanium"
+        },
+        {
+          "from": [
+            "Why",
+            "why"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        },
+        {
+          "from": [
+            "Mathematica",
+            "mathematica"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Mathematica"
+        },
+        {
+          "from": [
+            "scripts",
+            "scripts!"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        },
+        {
+          "from": [
+            "REST",
+            "rest"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "REST"
+        },
+        {
+          "from": [
+            "SAS",
+            "sas"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "SAS"
+        },
+        {
+          "from": [
+            "Velocity",
+            "velocity"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Velocity"
+        },
+        {
+          "from": [
+            "Puppet",
+            "puppet"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Puppet"
+        },
+        {
+          "from": [
+            "Various",
+            "various"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Various"
+        },
+        {
+          "from": [
+            "dev",
+            "dev."
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        },
+        {
+          "from": [
+            "you",
+            "You"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        },
+        {
+          "from": [
+            "JSF",
+            "jsf"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "JSF"
+        },
+        {
+          "from": [
+            "CUDA",
+            "cuda"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "CUDA"
+        },
+        {
+          "from": [
+            "Scheme",
+            "scheme"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Scheme"
+        },
+        {
+          "from": [
+            "D3",
+            "d3"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "D3"
+        },
+        {
+          "from": [
+            "how",
+            "How"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        },
+        {
+          "from": [
+            "Spark",
+            "SPARK"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Spark"
+        },
+        {
+          "from": [
+            "Assembly",
+            "assembly"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Assembly"
+        },
+        {
+          "from": [
+            "Adobe",
+            "adobe"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Adobe"
+        },
+        {
+          "from": [
+            "Neo4j",
+            "neo4j"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Neo4j"
+        },
+        {
+          "from": [
+            "DB",
+            "db"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        },
+        {
+          "from": [
+            "LaTeX",
+            "latex"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "LaTeX"
+        },
+        {
+          "from": [
+            "WPF",
+            "wpf"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "WPF"
+        },
+        {
+          "from": [
+            "jQuery-Mobile",
+            "jQueryMobile"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "jQuery-Mobile"
+        },
+        {
+          "from": [
+            "Drupal",
+            "drupal"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Drupal"
+        },
+        {
+          "from": [
+            "MXML",
+            "mxml"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "MXML"
+        },
+        {
+          "from": [
+            "PAWN",
+            "Pawn"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "PAWN"
+        },
+        {
+          "from": [
+            "DataBasic",
+            "Databasic"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "DataBasic"
+        },
+        {
+          "from": [
+            "golang",
+            "Golang"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "go"
+        },
+        {
+          "from": [
+            "YUI",
+            "yui"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "YUI"
+        },
+        {
+          "from": [
+            "AppleScript",
+            "Applescript"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "AppleScript"
+        },
+        {
+          "from": [
+            "Solr",
+            "solr"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Solr"
+        },
+        {
+          "from": [
+            "JSON",
+            "Json"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "JSON"
+        },
+        {
+          "from": [
+            "just",
+            "Just"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        },
+        {
+          "from": [
+            "Knockout",
+            "knockout"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Knockout"
+        },
+        {
+          "from": [
+            "CakePHP",
+            "Cakephp"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "CakePHP"
+        },
+        {
+          "from": [
+            "Custom",
+            "custom"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Custom"
+        },
+        {
+          "from": [
+            "Go",
+            "go"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Go"
+        },
+        {
+          "from": [
+            "baby!",
+            "baby"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        },
+        {
+          "from": [
+            "Powerbuilder",
+            "PowerBuilder"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Powerbuilder"
+        },
+        {
+          "from": [
+            "Developer",
+            "developer"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        },
+        {
+          "from": [
+            "ElasticSearch",
+            "Elasticsearch"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ElasticSearch"
+        },
+        {
+          "from": [
+            "Action",
+            "action"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Action"
+        },
+        {
+          "from": [
+            "if",
+            "If"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        },
+        {
+          "from": [
+            "Python",
+            "python"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Python"
+        },
+        {
+          "from": [
+            "it",
+            "it."
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        },
+        {
+          "from": [
+            "RavenDB",
+            "RavenDb"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "RavenDB"
+        },
+        {
+          "from": [
+            "Server",
+            "server"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        },
+        {
+          "from": [
+            "JS",
+            "js"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        },
+        {
+          "from": [
+            "BPEL",
+            "bpel"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "BPEL"
+        },
+        {
+          "from": [
+            "proficient",
+            "\"Proficient\""
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        },
+        {
+          "from": [
+            "CFML",
+            "cfml"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "CFML"
+        },
+        {
+          "from": [
+            "xBase",
+            "Xbase"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "xBase"
+        },
+        {
+          "from": [
+            "Several",
+            "several"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        },
+        {
+          "from": [
+            "ASPX",
+            "aspx"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ASPX"
+        },
+        {
+          "from": [
+            "me",
+            "Me"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        },
+        {
+          "from": [
+            "AutoHotkey",
+            "Autohotkey"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "AutoHotkey"
+        },
+        {
+          "from": [
+            "Joomla",
+            "Joomla!"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Joomla"
+        },
+        {
+          "from": [
+            "seriously",
+            "seriously!"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        },
+        {
+          "from": [
+            "My",
+            "my"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        },
+        {
+          "from": [
+            "MDX",
+            "mdx"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "MDX"
+        },
+        {
+          "from": [
+            "Boo",
+            "boo"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Boo"
+        },
+        {
+          "from": [
+            "GLSL",
+            "glsl"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "GLSL"
+        },
+        {
+          "from": [
+            "QML",
+            "qml"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "QML"
+        },
+        {
+          "from": [
+            "MEL",
+            "Mel"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "MEL"
+        },
+        {
+          "from": [
+            "on",
+            "On"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        },
+        {
+          "from": [
+            "POWERSCRIPT",
+            "powerscript"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "POWERSCRIPT"
+        },
+        {
+          "from": [
+            "SystemVerilog",
+            "system-verilog"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "SystemVerilog"
+        },
+        {
+          "from": [
+            "Ruby",
+            "ruby"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Ruby"
+        },
+        {
+          "from": [
+            "Objective",
+            "objective"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Objective-C"
+        },
+        {
+          "from": [
+            "Zend",
+            "zend"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Zend"
+        },
+        {
+          "from": [
+            "Node",
+            "node"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Node.js"
+        },
+        {
+          "from": [
+            "Regex",
+            "regex"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Regex"
+        },
+        {
+          "from": [
+            "Processing",
+            "processing"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Processing"
+        },
+        {
+          "from": [
+            "RealBasic",
+            "Realbasic"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "RealBasic"
+        },
+        {
+          "from": [
+            "sh",
+            "SH"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "sh"
+        },
+        {
+          "from": [
+            "Eiffel",
+            "eiffel"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Eiffel"
+        },
+        {
+          "from": [
+            "so",
+            "So"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        },
+        {
+          "from": [
+            "Storm",
+            "storm"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Storm"
+        },
+        {
+          "from": [
+            "XAML",
+            "xaml"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "XAML"
+        },
+        {
+          "from": [
+            "Tk",
+            "tk"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Tk"
+        },
+        {
+          "from": [
+            "Progress",
+            "progress"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Progress"
+        },
+        {
+          "from": [
+            "to",
+            "To"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        },
+        {
+          "from": [
+            "VHDL",
+            "vhdl"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "VHDL"
+        },
+        {
+          "from": [
+            "Xtend",
+            "XTEND"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Xtend"
+        },
+        {
+          "from": [
+            "Oracle",
+            "oracle"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Oracle"
+        },
+        {
+          "from": [
+            "know",
+            "know."
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        },
+        {
+          "from": [
+            "Mongo",
+            "mongo"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Mongo"
+        },
+        {
+          "from": [
+            "learning",
+            "Learning"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        },
+        {
+          "from": [
+            "Common",
+            "common"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Common"
+        },
+        {
+          "from": [
+            "proprietary",
+            "Proprietary"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        },
+        {
+          "from": [
+            "HBase",
+            "Hbase"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "HBase"
+        },
+        {
+          "from": [
+            "OpenEdge",
+            "Openedge"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "OpenEdge"
+        },
+        {
+          "from": [
+            "VB6",
+            "vb6"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "VB6"
+        },
+        {
+          "from": [
+            "none",
+            "None"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        },
+        {
+          "from": [
+            "Basic.NET",
+            "Basic.Net"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "VB.NET"
+        },
+        {
+          "from": [
+            "Emacs",
+            "emacs"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Emacs"
+        },
+        {
+          "from": [
+            "ZK",
+            "zk"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ZK"
+        },
+        {
+          "from": [
+            "VBS",
+            "vbs"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "VBS"
+        },
+        {
+          "from": [
+            "PostScript",
+            "Postscript"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "PostScript"
+        },
+        {
+          "from": [
+            "Dart",
+            "dart"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Dart"
+        },
+        {
+          "from": [
+            "msbuild",
+            "MSBuild"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "msbuild"
+        },
+        {
+          "from": [
+            "shellscript",
+            "Shellscript"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "shell"
+        },
+        {
+          "from": [
+            "Excel",
+            "excel"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Excel"
+        },
+        {
+          "from": [
+            "Lots",
+            "lots"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Lots"
+        },
+        {
+          "from": [
+            "help",
+            "Help"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        },
+        {
+          "from": [
+            "Expect",
+            "expect"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Expect"
+        },
+        {
+          "from": [
+            "OWL",
+            "owl"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "OWL"
+        },
+        {
+          "from": [
+            "Salesforce",
+            "salesforce"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Salesforce"
+        },
+        {
+          "from": [
+            "J2EE",
+            "j2ee"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "J2EE"
+        },
+        {
+          "from": [
+            "like",
+            "LIKE"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        },
+        {
+          "from": [
+            "maven",
+            "Maven"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "maven"
+        },
+        {
+          "from": [
+            "Vimscript",
+            "vimscript"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Vimscript"
+        },
+        {
+          "from": [
+            "JADE",
+            "Jade"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "JADE"
+        },
+        {
+          "from": [
+            "Flex",
+            "flex"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Flex"
+        },
+        {
+          "from": [
+            "TYPO3",
+            "Typo3"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "TYPO3"
+        },
+        {
+          "from": [
+            "Responsive",
+            "responsive"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        }
+      ],
+      "description": "Mass edit cells in column programming_languages_other"
+    },
+    {
+      "op": "core/mass-edit",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "programming_languages_other",
+      "expression": "value",
+      "edits": [
+        {
+          "from": [
+            "Shell",
+            "shell"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Shell"
+        },
+        {
+          "from": [
+            "Objective-C",
+            "Objective-c"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Objective-C"
+        },
+        {
+          "from": [
+            "Go",
+            "go"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Go"
+        }
+      ],
+      "description": "Mass edit cells in column programming_languages_other"
+    },
+    {
+      "op": "core/mass-edit",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "programming_languages_other",
+      "expression": "value",
+      "edits": [
+        {
+          "from": [
+            "Sass",
+            "SSAS"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Sass"
+        },
+        {
+          "from": [
+            "Text",
+            "Xtext"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        }
+      ],
+      "description": "Mass edit cells in column programming_languages_other"
+    },
+    {
+      "op": "core/mass-edit",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "programming_languages_other",
+      "expression": "value",
+      "edits": [
+        {
+          "from": [
+            "",
+            "3",
+            "6",
+            "2",
+            "3.0",
+            "4",
+            "1",
+            "8051",
+            "2.0",
+            "2008",
+            "5",
+            "7",
+            "90",
+            "95",
+            "16",
+            "2.2",
+            "2001",
+            "3.3",
+            "4.01",
+            "5.2",
+            "5.5",
+            "6.0",
+            "6502",
+            "68000",
+            "9"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        },
+        {
+          "from": [
+            "ActionScript",
+            "ActionScript3",
+            "ActionsScript",
+            "Actionscrip",
+            "actionscript2"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ActionScript"
+        },
+        {
+          "from": [
+            "ARM",
+            "ARM7",
+            "arm64"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ARM"
+        },
+        {
+          "from": [
+            "ASM",
+            "asm32",
+            "asm64"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ASM"
+        },
+        {
+          "from": [
+            "jQuery",
+            "jayQuery",
+            "jquerry"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "jQuery"
+        },
+        {
+          "from": [
+            "CoffeeScript",
+            "Coffescript",
+            "CoffeesScript"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "CoffeeScript"
+        },
+        {
+          "from": [
+            "Scheme",
+            "Schema"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Scheme"
+        },
+        {
+          "from": [
+            "SQLite",
+            "sqlite3"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "SQLite"
+        },
+        {
+          "from": [
+            "this",
+            "these"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        },
+        {
+          "from": [
+            "Assembly",
+            "Asembly"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Assembly"
+        },
+        {
+          "from": [
+            "smart",
+            "smarty"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        },
+        {
+          "from": [
+            "Pascal",
+            "Pascal86"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Pascal"
+        },
+        {
+          "from": [
+            "TypeScript",
+            "TypoScript"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "TypeScript"
+        }
+      ],
+      "description": "Mass edit cells in column programming_languages_other"
+    },
+    {
+      "op": "core/multivalued-cell-join",
+      "columnName": "programming_languages_other",
+      "keyColumnName": "year",
+      "separator": ";",
+      "description": "Join multi-valued cells in column programming_languages_other"
+    },
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "years_experience",
+      "expression": "grel:value.replace(\"years\", \"\").replace(\"to\", \"-\")",
+      "onError": "keep-original",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column years_experience using expression grel:value.replace(\"years\", \"\").replace(\"to\", \"-\")"
+    },
+    {
+      "op": "core/mass-edit",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "years_experience",
+      "expression": "value",
+      "edits": [
+        {
+          "from": [
+            "Less than 1 year"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "<1"
+        }
+      ],
+      "description": "Mass edit cells in column years_experience"
+    },
+    {
+      "op": "core/mass-edit",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "years_experience",
+      "expression": "value",
+      "edits": [
+        {
+          "from": [
+            "Less than a year"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "<1"
+        }
+      ],
+      "description": "Mass edit cells in column years_experience"
+    },
+    {
+      "op": "core/mass-edit",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "years_experience",
+      "expression": "value",
+      "edits": [
+        {
+          "from": [
+            "More than 50 "
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ">50"
+        }
+      ],
+      "description": "Mass edit cells in column years_experience"
+    },
+    {
+      "op": "core/mass-edit",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "years_experience",
+      "expression": "value",
+      "edits": [
+        {
+          "from": [
+            "30 or more "
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ">30"
+        }
+      ],
+      "description": "Mass edit cells in column years_experience"
+    },
+    {
+      "op": "core/mass-edit",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "years_experience",
+      "expression": "value",
+      "edits": [
+        {
+          "from": [
+            "20 or more "
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ">20"
+        }
+      ],
+      "description": "Mass edit cells in column years_experience"
+    },
+    {
+      "op": "core/mass-edit",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "years_experience",
+      "expression": "value",
+      "edits": [
+        {
+          "from": [
+            "11+ "
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "11>"
+        }
+      ],
+      "description": "Mass edit cells in column years_experience"
+    },
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "years_experience",
+      "expression": "jython:import re\ntemp = value.split()\nif all([x.isdigit() for x in temp]):\n    return \"-\".join(temp)\nelse:\n   return re.sub(\" +\" ,  \"\" , value)",
+      "onError": "keep-original",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column years_experience using expression jython:import re\ntemp = value.split()\nif all([x.isdigit() for x in temp]):\n    return \"-\".join(temp)\nelse:\n   return re.sub(\" +\" ,  \"\" , value)"
+    },
+    {
+      "op": "core/mass-edit",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "occupation",
+      "expression": "value",
+      "edits": [
+        {
+          "from": [
+            "Back-end web developer",
+            "Back-End Web Developer"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Back-end web developer"
+        },
+        {
+          "from": [
+            "Full-stack web developer",
+            "Full-Stack Web Developer"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Full-stack web developer"
+        },
+        {
+          "from": [
+            "Executive (VP of Eng., CTO, CIO, etc.)",
+            "Executive (VP of Eng, CTO, CIO, etc.)"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Executive (VP of Eng., CTO, CIO, etc.)"
+        },
+        {
+          "from": [
+            "other",
+            "Other"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        },
+        {
+          "from": [
+            "Embedded application developer",
+            "Embedded Application Developer"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Embedded application developer"
+        },
+        {
+          "from": [
+            "Database administrator",
+            "Database Administrator"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Database administrator"
+        },
+        {
+          "from": [
+            "Front-end web developer",
+            "Front-End Web Developer"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Front-end web developer"
+        }
+      ],
+      "description": "Mass edit cells in column occupation"
+    },
+    {
+      "op": "core/mass-edit",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "occupation",
+      "expression": "value",
+      "edits": [
+        {
+          "from": [
+            "Enterprise level services developer",
+            "Enterprise Level Services"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Enterprise level services developer"
+        }
+      ],
+      "description": "Mass edit cells in column occupation"
+    },
+    {
+      "op": "core/mass-edit",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "age",
+      "expression": "value",
+      "edits": [
+        {
+          "from": [
+            "25 - 34 years old"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "25-34"
+        }
+      ],
+      "description": "Mass edit cells in column age"
+    },
+    {
+      "op": "core/mass-edit",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "age",
+      "expression": "value",
+      "edits": [
+        {
+          "from": [
+            "18 - 24 years old"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "18-24"
+        }
+      ],
+      "description": "Mass edit cells in column age"
+    },
+    {
+      "op": "core/mass-edit",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "age",
+      "expression": "value",
+      "edits": [
+        {
+          "from": [
+            "35 - 44 years old"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "35-44"
+        }
+      ],
+      "description": "Mass edit cells in column age"
+    },
+    {
+      "op": "core/mass-edit",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "age",
+      "expression": "value",
+      "edits": [
+        {
+          "from": [
+            "45 - 54 years old"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "45-54"
+        }
+      ],
+      "description": "Mass edit cells in column age"
+    },
+    {
+      "op": "core/mass-edit",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "age",
+      "expression": "value",
+      "edits": [
+        {
+          "from": [
+            "55 - 64 years old"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "55-64"
+        }
+      ],
+      "description": "Mass edit cells in column age"
+    },
+    {
+      "op": "core/mass-edit",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "age",
+      "expression": "value",
+      "edits": [
+        {
+          "from": [
+            "65 years or older"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ">65"
+        }
+      ],
+      "description": "Mass edit cells in column age"
+    },
+    {
+      "op": "core/mass-edit",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "age",
+      "expression": "value",
+      "edits": [
+        {
+          "from": [
+            "Under 18 years old"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "<18"
+        }
+      ],
+      "description": "Mass edit cells in column age"
+    },
+    {
+      "op": "core/mass-edit",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "age",
+      "expression": "value",
+      "edits": [
+        {
+          "from": [
+            "Prefer not to disclose"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        }
+      ],
+      "description": "Mass edit cells in column age"
+    },
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "age",
+      "expression": "value.trim()",
+      "onError": "keep-original",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column age using expression value.trim()"
+    },
+    {
+      "op": "core/mass-edit",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "job_satisfaction",
+      "expression": "value",
+      "edits": [
+        {
+          "from": [
+            "It's a paycheck",
+            "Its a paycheck"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "It's a paycheck"
+        }
+      ],
+      "description": "Mass edit cells in column job_satisfaction"
+    },
+    {
+      "op": "core/mass-edit",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "job_satisfaction",
+      "expression": "value",
+      "edits": [
+        {
+          "from": [
+            "I'm neither satisfied nor dissatisfied",
+            "I'm neither satisfied nor dissatisfied with my job"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "neither satisfied nor dissatisfied"
+        }
+      ],
+      "description": "Mass edit cells in column job_satisfaction"
+    },
+    {
+      "op": "core/mass-edit",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "job_satisfaction",
+      "expression": "value",
+      "edits": [
+        {
+          "from": [
+            "Neither satisfied nor dissatisfied",
+            "neither satisfied nor dissatisfied"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Neither satisfied nor dissatisfied"
+        }
+      ],
+      "description": "Mass edit cells in column job_satisfaction"
+    },
+    {
+      "op": "core/mass-edit",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "job_satisfaction",
+      "expression": "value",
+      "edits": [
+        {
+          "from": [
+            "I hate my job",
+            "Hate my job"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "hate my job"
+        }
+      ],
+      "description": "Mass edit cells in column job_satisfaction"
+    },
+    {
+      "op": "core/mass-edit",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "job_satisfaction",
+      "expression": "value",
+      "edits": [
+        {
+          "from": [
+            "Other (please specify)"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        }
+      ],
+      "description": "Mass edit cells in column job_satisfaction"
+    },
+    {
+      "op": "core/mass-edit",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "company_size",
+      "expression": "value",
+      "edits": [
+        {
+          "from": [
+            "Other (please specify)"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        }
+      ],
+      "description": "Mass edit cells in column company_size"
+    },
+    {
+      "op": "core/mass-edit",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "company_size",
+      "expression": "value",
+      "edits": [
+        {
+          "from": [
+            "Other (not working, consultant, etc.)"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        }
+      ],
+      "description": "Mass edit cells in column company_size"
+    },
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "company_size",
+      "expression": "jython:return value.replace(\" employees\",\"\")",
+      "onError": "keep-original",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column company_size using expression jython:return value.replace(\" employees\",\"\")"
+    },
+    {
+      "op": "core/mass-edit",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "company_size",
+      "expression": "value",
+      "edits": [
+        {
+          "from": [
+            "I prefer not to answer"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        }
+      ],
+      "description": "Mass edit cells in column company_size"
+    },
+    {
+      "op": "core/mass-edit",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "company_size",
+      "expression": "value",
+      "edits": [
+        {
+          "from": [
+            "I don't know"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        }
+      ],
+      "description": "Mass edit cells in column company_size"
+    },
+    {
+      "op": "core/mass-edit",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "company_size",
+      "expression": "value",
+      "edits": [
+        {
+          "from": [
+            "I am not sure"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        }
+      ],
+      "description": "Mass edit cells in column company_size"
+    },
+    {
+      "op": "core/mass-edit",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "company_size",
+      "expression": "value",
+      "edits": [
+        {
+          "from": [
+            "I am not part of a company"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        }
+      ],
+      "description": "Mass edit cells in column company_size"
+    },
+    {
+      "op": "core/mass-edit",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "company_size",
+      "expression": "value",
+      "edits": [
+        {
+          "from": [
+            "Just me - I am a freelancer, sole proprietor, etc."
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        }
+      ],
+      "description": "Mass edit cells in column company_size"
+    },
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "company_size",
+      "expression": "jython:return value.replace(\" to \", \"-\")",
+      "onError": "keep-original",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column company_size using expression jython:return value.replace(\" to \", \"-\")"
+    },
+    {
+      "op": "core/mass-edit",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "company_size",
+      "expression": "value",
+      "edits": [
+        {
+          "from": [
+            "Fewer than 10"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "<10"
+        }
+      ],
+      "description": "Mass edit cells in column company_size"
+    },
+    {
+      "op": "core/mass-edit",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "company_size",
+      "expression": "value",
+      "edits": [
+        {
+          "from": [
+            "10,000+"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ">10000"
+        }
+      ],
+      "description": "Mass edit cells in column company_size"
+    },
+    {
+      "op": "core/mass-edit",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "company_size",
+      "expression": "value",
+      "edits": [
+        {
+          "from": [
+            "10,000 or more"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ">10000"
+        }
+      ],
+      "description": "Mass edit cells in column company_size"
+    },
+    {
+      "op": "core/mass-edit",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "company_size",
+      "expression": "value",
+      "edits": [
+        {
+          "from": [
+            "5,000-9,999"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "5000-9999"
+        }
+      ],
+      "description": "Mass edit cells in column company_size"
+    },
+    {
+      "op": "core/mass-edit",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "company_size",
+      "expression": "value",
+      "edits": [
+        {
+          "from": [
+            "1,000-4,999"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "1000-4999"
+        }
+      ],
+      "description": "Mass edit cells in column company_size"
+    },
+    {
+      "op": "core/mass-edit",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "company_size",
+      "expression": "value",
+      "edits": [
+        {
+          "from": [
+            "1,000-3,000"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "1000-3000"
+        }
+      ],
+      "description": "Mass edit cells in column company_size"
+    },
+    {
+      "op": "core/mass-edit",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "company_size",
+      "expression": "value",
+      "edits": [
+        {
+          "from": [
+            "Student"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ""
+        }
+      ],
+      "description": "Mass edit cells in column company_size"
+    },
+    {
+      "op": "core/mass-edit",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "company_size",
+      "expression": "value",
+      "edits": [
+        {
+          "from": [
+            "Fortune 1000 (1,000+)"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": ">1000"
+        }
+      ],
+      "description": "Mass edit cells in column company_size"
+    },
+    {
+      "op": "core/mass-edit",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "company_size",
+      "expression": "value",
+      "edits": [
+        {
+          "from": [
+            "Mature Small Business (25-100)"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "25-100"
+        }
+      ],
+      "description": "Mass edit cells in column company_size"
+    },
+    {
+      "op": "core/mass-edit",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "company_size",
+      "expression": "value",
+      "edits": [
+        {
+          "from": [
+            "Mid Sized (100-999)"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "100-999"
+        }
+      ],
+      "description": "Mass edit cells in column company_size"
+    },
+    {
+      "op": "core/mass-edit",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "company_size",
+      "expression": "value",
+      "edits": [
+        {
+          "from": [
+            "Start Up (1-25)"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "1-25"
+        }
+      ],
+      "description": "Mass edit cells in column company_size"
+    },
+    {
+      "op": "core/multivalued-cell-split",
+      "columnName": "gender",
+      "keyColumnName": "year",
+      "mode": "separator",
+      "separator": ";",
+      "regex": false,
+      "description": "Split multi-valued cells in column gender"
+    },
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "gender",
+      "expression": "value.trim()",
+      "onError": "keep-original",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column gender using expression value.trim()"
+    },
+    {
+      "op": "core/multivalued-cell-join",
+      "columnName": "gender",
+      "keyColumnName": "year",
+      "separator": ";",
+      "description": "Join multi-valued cells in column gender"
+    },
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "want_work_language",
+      "expression": "value.trim()",
+      "onError": "keep-original",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column want_work_language using expression value.trim()"
+    },
+    {
+      "op": "core/mass-edit",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "education",
+      "expression": "value",
+      "edits": [
+        {
+          "from": [
+            "Master’s degree (MA, MS, M.Eng., MBA, etc.)",
+            "Master’s degree (M.A., M.S., M.Eng., MBA, etc.)"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Master’s degree (MA, MS, M.Eng., MBA, etc.)"
+        },
+        {
+          "from": [
+            "Bachelor’s degree (BA, BS, B.Eng., etc.)",
+            "Bachelor’s degree (B.A., B.S., B.Eng., etc.)"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Bachelor’s degree (BA, BS, B.Eng., etc.)"
+        },
+        {
+          "from": [
+            "Other doctoral degree (Ph.D, Ed.D., etc.)",
+            "Other doctoral degree (Ph.D., Ed.D., etc.)"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Other doctoral degree (Ph.D, Ed.D., etc.)"
+        }
+      ],
+      "description": "Mass edit cells in column education"
+    },
+    {
+      "op": "core/multivalued-cell-split",
+      "columnName": "education",
+      "keyColumnName": "year",
+      "mode": "separator",
+      "separator": ";",
+      "regex": false,
+      "description": "Split multi-valued cells in column education"
+    },
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "education",
+      "expression": "value.trim()",
+      "onError": "keep-original",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column education using expression value.trim()"
+    },
+    {
+      "op": "core/mass-edit",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "education",
+      "expression": "value",
+      "edits": [
+        {
+          "from": [
+            "Online class (e.g. Coursera, Codecademy, Khan Academy, etc.)",
+            "Online class (ie. Coursera, Codecademy, Khan Academy, etc.)"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Online class (e.g. Coursera, Codecademy, Khan Academy, etc.)"
+        },
+        {
+          "from": [
+            "Industry certification",
+            "Industry certification program"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Industry certification"
+        },
+        {
+          "from": [
+            "Some college coursework in Computer Science (or related field)",
+            "Some college coursework in Computer Science (or related field) but no degree"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Some college coursework in Computer Science (or related field)"
+        },
+        {
+          "from": [
+            "Mentorship program (e.g. Flatiron School, GDI, etc.)",
+            "Mentorship program (ie. Flatiron School, GDI, etc.)"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Mentorship program (e.g. Flatiron School, GDI, etc.)"
+        }
+      ],
+      "description": "Mass edit cells in column education"
+    },
+    {
+      "op": "core/mass-edit",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "education",
+      "expression": "value",
+      "edits": [
+        {
+          "from": [
+            "Associate degree",
+            "Associate degree (A.A., A.S., etc.)"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Associate degree"
+        }
+      ],
+      "description": "Mass edit cells in column education"
+    },
+    {
+      "op": "core/multivalued-cell-join",
+      "columnName": "education",
+      "keyColumnName": "year",
+      "separator": ";",
+      "description": "Join multi-valued cells in column education"
+    },
+    {
+      "op": "core/multivalued-cell-split",
+      "columnName": "database_desire_work",
+      "keyColumnName": "year",
+      "mode": "separator",
+      "separator": ";",
+      "regex": false,
+      "description": "Split multi-valued cells in column database_desire_work"
+    },
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "database_desire_work",
+      "expression": "value.trim()",
+      "onError": "keep-original",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column database_desire_work using expression value.trim()"
+    },
+    {
+      "op": "core/multivalued-cell-join",
+      "columnName": "database_desire_work",
+      "keyColumnName": "year",
+      "separator": ";",
+      "description": "Join multi-valued cells in column database_desire_work"
+    },
+    {
+      "op": "core/multivalued-cell-split",
+      "columnName": "database_worked_with",
+      "keyColumnName": "year",
+      "mode": "separator",
+      "separator": ";",
+      "regex": false,
+      "description": "Split multi-valued cells in column database_worked_with"
+    },
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "database_worked_with",
+      "expression": "value.trim()",
+      "onError": "keep-original",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column database_worked_with using expression value.trim()"
+    },
+    {
+      "op": "core/multivalued-cell-join",
+      "columnName": "database_worked_with",
+      "keyColumnName": "year",
+      "separator": ";",
+      "description": "Join multi-valued cells in column database_worked_with"
+    },
+    {
+      "op": "core/mass-edit",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "remote_status",
+      "expression": "value",
+      "edits": [
+        {
+          "from": [
+            "Full-time remote",
+            "Full-time Remote"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Full-time remote"
+        },
+        {
+          "from": [
+            "Part-time remote",
+            "Part-time Remote"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Part-time remote"
+        }
+      ],
+      "description": "Mass edit cells in column remote_status"
+    },
+    {
+      "op": "core/mass-edit",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "remote_status",
+      "expression": "value",
+      "edits": [
+        {
+          "from": [
+            "I rarely work remotely",
+            "I rarely work remote"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "I rarely work remotely"
+        }
+      ],
+      "description": "Mass edit cells in column remote_status"
+    },
+    {
+      "op": "core/mass-edit",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "industry",
+      "expression": "value",
+      "edits": [
+        {
+          "from": [
+            "Other (please specify)"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Other"
+        }
+      ],
+      "description": "Mass edit cells in column industry"
+    },
+    {
+      "op": "core/mass-edit",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "industry",
+      "expression": "value",
+      "edits": [
+        {
+          "from": [
+            "I'm a student"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Student"
+        }
+      ],
+      "description": "Mass edit cells in column industry"
+    }
+  ]
