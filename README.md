@@ -1,4 +1,14 @@
-# stack-overflow-survey-analysis
+# Stack Overflow Survey Analysis
 
-* 2015 survey: remove initial row with message `Select all that apply`
-* 2011 2012 2013: first row specifies choices -> to be removed
+Initial Clean up process
+
+- [x]  Initial etl operations in open refine
+    - Merge related columns → renaming
+
+- [x]  Initial operations in jupyter
+    - Column name formating to snake case
+    - Datasets column name comparing and normalization
+    - Basic feature engineering: 2018 occupation
+    - Selecting features to work with based on its presence over the years
+    - Feature column for tracking percetage of missing rows per year dataset
+    - Merging all datasets with just the selected features
