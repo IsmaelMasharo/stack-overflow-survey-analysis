@@ -5036,5 +5036,136 @@
     "keyColumnName": "year",
     "separator": ";",
     "description": "Join multi-valued cells in column programming_languages_other"
+  },
+  {
+    "op": "core/multivalued-cell-split",
+    "columnName": "programming_languages",
+    "keyColumnName": "year",
+    "mode": "separator",
+    "separator": ";",
+    "regex": false,
+    "description": "Split multi-valued cells in column programming_languages"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "programming_languages",
+    "expression": "value.toLowercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column programming_languages using expression value.toLowercase()"
+  },
+  {
+    "op": "core/multivalued-cell-split",
+    "columnName": "programming_languages",
+    "keyColumnName": "year",
+    "mode": "separator",
+    "separator": "/",
+    "regex": false,
+    "description": "Split multi-valued cells in column programming_languages"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "programming_languages",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column programming_languages using expression value.trim()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "programming_languages",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "angularjs"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "angular js"
+      }
+    ],
+    "description": "Mass edit cells in column programming_languages"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "programming_languages",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "node.js"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "node js"
+      }
+    ],
+    "description": "Mass edit cells in column programming_languages"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "programming_languages",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "none"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": ""
+      }
+    ],
+    "description": "Mass edit cells in column programming_languages"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "programming_languages",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "reactjs"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "react js"
+      }
+    ],
+    "description": "Mass edit cells in column programming_languages"
+  },
+  {
+    "op": "core/multivalued-cell-join",
+    "columnName": "programming_languages",
+    "keyColumnName": "year",
+    "separator": ";",
+    "description": "Join multi-valued cells in column programming_languages"
   }
 ]
