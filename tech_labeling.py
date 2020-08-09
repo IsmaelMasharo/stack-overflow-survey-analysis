@@ -1,5 +1,5 @@
 tech_labeling = {
-    "javascript": "language",
+    "javascript": "language, js",
     "java": "language",
     "sql": "language",
     "c": "language",
