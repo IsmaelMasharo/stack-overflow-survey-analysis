@@ -38,3 +38,6 @@ stack_overflow_survey_results
 
 # mac
 .DS_Store
+
+# files for testing
+test.ipynb
