@@ -21,7 +21,6 @@ Wrangling *StackOverflow Survey Results* over from 2011 till 2020.
     - survey_results_2018.csv  (Direct Survey download and renamed)
     - survey_results_2019.csv  (Direct Survey download and renamed)
     - survey_results_2020.csv  (Direct Survey download and renamed)
-    ...
 ```
 
 ### Initial Clean up steps
@@ -50,6 +49,14 @@ Every step creates the input for the next step.
 
 
 ### EDA
-Interactive chart visualizations using plotly. The input for this files is the one from step 3 (`survey_report_combined.csv`)
-- *programming_languages_eda.ipynb*
-- *job_satisfaction_eda.ipynb*
+Interactive chart visualizations using plotly. The input for this files is the one from step 3 (`survey_report_combined.csv`)  
+
+**programming_languages_eda.ipynb**  
+
+    Explores the programming languages over the years:  
+    - Evolution of non common js languages  
+    - Evolution of programming languages in general  
+    
+**job_satisfaction_eda.ipynb**  
+
+    Descriptive visualization comparing each year job satisfaction in a compeling way.
