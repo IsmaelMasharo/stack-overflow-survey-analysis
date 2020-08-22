@@ -1,6 +1,6 @@
 import pandas as pd
 
-from scripts.developer_type_column_rename import standarized_developer_type_column, selected_dev_type_columns
+from scripts.developer_type_labeling import standarized_developer_type_column, selected_dev_type_columns
 
 class CommonHandler:
     

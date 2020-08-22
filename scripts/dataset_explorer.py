@@ -90,7 +90,7 @@ class SODataSetExplorer:
                 
             similar_per_year[year] = similar
 
-            if display_similar:
+            if display_similar and similar:
                 print(year)
                 pprint(similar)
                 print('\n')
@@ -130,19 +130,20 @@ class SODataSetExplorer:
         merged_df = pd.concat(dataframes_with_column)
 
         df = merged_df
-
-        feature_df = df.groupby(['year', feature])[feature].count().to_frame()
-        if year_summary:
+        
+        if year_summary or feature_per_year:
+            feature_df = df.groupby(['year', feature])[feature].count().to_frame()
             feature_df.columns = ['count']
             feature_df['percentage'] = feature_df.groupby(level=0).apply(lambda x: x / float(x.sum())).round(4)
+
+        if year_summary:
             display(feature_df)
 
         if feature_per_year:
-            display_func(feature_df.reset_index())
+            display_func(feature_df.reset_index()[['year', feature]])
 
         if total_value_counts:
-            df_counts = df[feature].value_counts().to_frame()
-            display_func(df_counts)
+            display_func(df[feature].value_counts().to_frame())
 
             
     def get_feature_dummies_per_year(self, feature, keep_features=[]):

@@ -1,11 +1,3 @@
-satisfaction_scale = [
-    "Very satisfied",
-    "Slightly satisfied",
-    "Neither satisfied nor dissatisfied",
-    "Slightly dissatisfied",
-    "Very dissatisfied",
-]
-
 satisfaction_labeling = {    
     "So happy it hurts": "Very satisfied",
     "I enjoy going to work": "Slightly satisfied",
@@ -51,3 +43,11 @@ satisfaction_labeling = {
     "Slightly dissatisfied": "Slightly dissatisfied",
     "Very dissatisfied": "Very dissatisfied",
 }
+
+satisfaction_scale = [
+    "Very satisfied",
+    "Slightly satisfied",
+    "Neither satisfied nor dissatisfied",
+    "Slightly dissatisfied",
+    "Very dissatisfied",
+]
