@@ -3,7 +3,6 @@ import pandas as pd
 import re
 from pprint import pprint
 
-from .column_rename import column_rename_mapping
 
 class SODataSetExplorer:
     """
@@ -16,7 +15,7 @@ class SODataSetExplorer:
         self.datasets = self.load(years, format_col_names)
 
 
-    def camel_to_snake(self, name):
+    def camel_to_snake(self, name: str):
         """
         Convert strings to snake case format
         """
@@ -33,7 +32,8 @@ class SODataSetExplorer:
         Args: 
             - years: list of dataframes to load. If none provided all datasets will be load
             - format_col_names: boolean. If True all column names will be format to snake_case
-            
+        Return:
+            - key, value pair: year agains as key, load df as value.
         """
         years = years or list(range(2011,2021))
         dataset_base_file_name = 'stack_overflow_datasets/survey_results_'
@@ -51,7 +51,16 @@ class SODataSetExplorer:
         return dfs
 
 
-    def dataset_cols_difference(self, base_year, years_against=[], display_difference=True):
+    def dataset_cols_difference(self, base_year: int, years_against=[], display_difference=True):
+        """
+        Compares features present in a given year and its presence or absence in the other.
+        Args:
+            - base_year: features within this year are compare against other years.
+            - years_against: list of year to compare with.
+            - display_difference: boolean. Print the difference by default.
+        Return:
+            - key, value pair: year_compared agains as key, column difference as value.
+        """
         df_to_compare_with = self.datasets
 
         if years_against:
@@ -75,7 +84,16 @@ class SODataSetExplorer:
         return column_differences
 
 
-    def similar_columns(self, columns, years=[], display_similar=True):
+    def similar_columns(self, columns: list, years=[], display_similar=True):
+        """
+        Given a list of features displays similar columns per year.
+        Args:
+            - columns: list of features to look for in each year.
+            - years: list of years to compare with.
+            - display_similar: boolean. Print the similar features by default.
+        Return:
+            - key, value pair: year as key, similar set as value.
+        """
         df_to_compare_with = self.datasets
 
         if years:
@@ -98,7 +116,22 @@ class SODataSetExplorer:
         return similar_per_year
 
 
-    def rename_columns(self, column_rename=column_rename_mapping, by_year=False):
+    def rename_columns(self, column_rename: {}, by_year=False):
+        """
+        Rename df columns across years given a dict columns mapping.
+        Args:
+            - column_rename: dict with feature_name as key and new_feature_name as value.
+            - by_year: When True, the column_rename dict should have the following structure: 
+                {
+                    'new_column_name': 'new_feature_name',
+                    'year_map': {
+                        [yeart]: 'feature_name',
+                        ...
+                    }
+                }
+        Return:
+            - None. Modifies the SODataSetExplorer instance in place.
+        """
         if by_year:
             new_column_name = column_rename['new_column_name']
             for year, column_name in column_rename['year_map'].items():
@@ -109,20 +142,21 @@ class SODataSetExplorer:
 
 
     def display_feature_across_years(
-        self, feature, display_func=print, year_summary=True, 
+        self, feature: str, display_func=print, year_summary=True, 
         feature_per_year=False, total_value_counts=False
     ):
         """
         Display feature evolution across years.
         Args:
-            - df: dataframe with feature asociated.
+            - feature: feature name present in at least one year. Raise error if not found in any.
             - display_func: function that will print/show the feature summary. Default print since its supported if run as script.
-                            Use display if in jupyter notebook.
+                            Use display if within jupyter notebook.
             - year_summary: boolean. feature sumary per year including count and percentage distribution.
             - feature_per_year: displays just all the feature values present per year
-            - total_value_counts: total count of each unique feature value independent of the year. 
+            - total_value_counts: total count of each unique feature value independent of the year.
+        Return:
+            - None
         """
-
         dataframes_with_column = [ 
             df[['year', feature]] for df in self.datasets.values() if feature in df.columns.tolist()
         ]
@@ -146,9 +180,21 @@ class SODataSetExplorer:
             display_func(df[feature].value_counts().to_frame())
 
             
-    def get_feature_dummies_per_year(self, feature, keep_features=[]):
-        feature_per_year_dummies = {} 
+    def get_feature_dummies_per_year(self, feature: str, years=[], keep_features=[]):
+        """
+        Get dummies for multiple choice categorical features. The feature pass as argument should be defined a semicolon separeted string.
+        Args:
+            - feature: feature from which to get the dummies
+            - years: list of years to get the dummies from. If none all years will be operated upon.
+            - keep_features: list of other features to preserve after the operation.
+        Return:
+            - key, value pair: year as key, dummies_df as value.
+        """
+        feature_per_year_dummies = {}
+        years = years or list(self.datasets.keys())
         for year, df in self.datasets.items():
+            if year not in years:
+                continue
             dummies_df = df[feature].str.split(';').str.join('|').str.get_dummies()
             for keep in keep_features:
                 dummies_df[keep] = df[keep]

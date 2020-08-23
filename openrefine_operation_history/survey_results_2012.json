@@ -497,5 +497,17 @@
       "mode": "row-based"
     },
     "description": "Remove rows"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "programming_language",
+    "newColumnName": "programming_languages",
+    "description": "Rename column programming_language to programming_languages"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "programming_language_other",
+    "newColumnName": "programming_languages_other",
+    "description": "Rename column programming_language_other to programming_languages_other"
   }
 ]

@@ -418,5 +418,11 @@
     "oldColumnName": "Column46",
     "newColumnName": "tech_products_own_other",
     "description": "Rename column Column46 to tech_products_own_other"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "programming_languages_oher",
+    "newColumnName": "programming_languages_other",
+    "description": "Rename column programming_languages_oher to programming_languages_other"
   }
 ]
