@@ -195,7 +195,7 @@ class SODataSetExplorer:
         for year, df in self.datasets.items():
             if year not in years:
                 continue
-            dummies_df = df[feature].str.split(';').str.join('|').str.get_dummies()
+            dummies_df = df[feature].str.split(';').str.join('|').str.replace(" ", "").str.get_dummies()
             for keep in keep_features:
                 dummies_df[keep] = df[keep]
             feature_per_year_dummies[year] = dummies_df

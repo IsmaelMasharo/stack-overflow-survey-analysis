@@ -1,5 +1,5 @@
 tech_labeling = {
-    "javascript": "language, js",
+    "javascript": "language",
     "java": "language",
     "sql": "language",
     "c": "language",
@@ -70,5 +70,6 @@ tech_labeling = {
     "ocaml": "language",
     "powershell": "tech",
     "webassembly": "language",
-    "other(s):": "tech"
+    "other(s):": "tech",
+    "html/css": "language",
 }
