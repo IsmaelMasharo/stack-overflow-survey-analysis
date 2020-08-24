@@ -180,12 +180,13 @@ class SODataSetExplorer:
             display_func(df[feature].value_counts().to_frame())
 
             
-    def get_feature_dummies_per_year(self, feature: str, years=[], keep_features=[]):
+    def get_feature_dummies_per_year(self, feature: str, years=[], keep_features=[], remove_white_spaces=False):
         """
         Get dummies for multiple choice categorical features. The feature pass as argument should be defined a semicolon separeted string.
         Args:
             - feature: feature from which to get the dummies
             - years: list of years to get the dummies from. If none all years will be operated upon.
+            - remove_white_spaces: boolean. If true, all white spaces from values will be removed before the encoding.
             - keep_features: list of other features to preserve after the operation.
         Return:
             - key, value pair: year as key, dummies_df as value.
@@ -195,7 +196,10 @@ class SODataSetExplorer:
         for year, df in self.datasets.items():
             if year not in years:
                 continue
-            dummies_df = df[feature].str.split(';').str.join('|').str.replace(" ", "").str.get_dummies()
+            if remove_white_spaces:
+                dummies_df = df[feature].str.split(';').str.join('|').str.replace(" ", "").str.get_dummies()
+            else:
+                dummies_df = df[feature].str.split(';').str.join('|').str.get_dummies()
             for keep in keep_features:
                 dummies_df[keep] = df[keep]
             feature_per_year_dummies[year] = dummies_df
