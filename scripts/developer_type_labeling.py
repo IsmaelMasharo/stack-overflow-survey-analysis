@@ -106,7 +106,6 @@ selected_dev_type_columns = {
     "Developer, front-end": "Frontend",
     "Developer, full-stack": "Fullstack",
     "Developer, mobile": "Mobile",
-    "Developer, desktop or enterprise applications": "Desktop",
     "DevOps specialist": "DevOps",
     "Database administrator": "Database Admin",
     "System administrator": "System Admin",
@@ -114,5 +113,5 @@ selected_dev_type_columns = {
     "Data or business analyst": "Data Analyst",
     "Engineering manager": "Engineer Manager",
     "Product manager": "Product manager",
-    "Designer": "Designer",
+    "Developer, desktop or enterprise applications": "Desktop",
 }
