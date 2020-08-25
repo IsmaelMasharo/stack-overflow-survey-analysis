@@ -103,12 +103,16 @@ standarized_developer_type_column = {
 
 selected_dev_type_columns = {
     "Developer, back-end": "Backend",
-    "Developer, full-stack": "Fullstack",
     "Developer, front-end": "Frontend",
-    "Developer, desktop or enterprise applications": "Desktop",
+    "Developer, full-stack": "Fullstack",
     "Developer, mobile": "Mobile",
+    "Developer, desktop or enterprise applications": "Desktop",
     "DevOps specialist": "DevOps",
-    "Database administrator": "DB Admin",
-    "System administrator": "Sys Admin",
+    "Database administrator": "Database Admin",
+    "System administrator": "System Admin",
     "Data scientist or machine learning specialist": "Data Scientist",
+    "Data or business analyst": "Data Analyst",
+    "Engineering manager": "Engineer Manager",
+    "Product manager": "Product manager",
+    "Designer": "Designer",
 }

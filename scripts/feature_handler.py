@@ -7,8 +7,8 @@ class CommonHandler:
     # https://stackoverflow.com/a/59366409
     @staticmethod
     def remove_iqr_outliers(df):
-        Q1 = df.quantile(0.25)
-        Q3 = df.quantile(0.75)
+        Q1 = df.quantile(0.1)
+        Q3 = df.quantile(0.9)
         IQR = Q3 - Q1
         return df[~((df < (Q1 - 1.5 * IQR)) | (df > (Q3 + 1.5 * IQR))).any(axis=1)]
 
