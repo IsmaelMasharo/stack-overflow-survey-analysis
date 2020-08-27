@@ -1,6 +1,6 @@
 # Stack Overflow Survey Analysis
 
-Wrangling *StackOverflow Survey Results* over from 2011 till 2020. I published a post related to this analaysis on Medium and you can find it [here](https://medium.com/@ismaelmasharo/10-years-of-stack-overflow-surveys-c8ff3f662b2f).
+Wrangling *Stack Overflow Survey Results* from 2011 till 2020. I published a post related to this analaysis on Medium and you can find it [here](https://medium.com/@ismaelmasharo/10-years-of-stack-overflow-surveys-c8ff3f662b2f).
 
 ### Datasets
 - No dataset is attached within this repo since the size of the overall datasets exceeds github maximum repo size policies.
