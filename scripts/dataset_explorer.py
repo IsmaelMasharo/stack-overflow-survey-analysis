@@ -45,7 +45,7 @@ class SODataSetExplorer:
             df = pd.read_csv(name, dtype=object)
             if format_col_names:
                 df.columns = map(lambda name: self.camel_to_snake(name), df.columns)
-            df['year'] = str(year)
+            df['year'] = year
             dfs[year] = df
 
         return dfs
@@ -179,8 +179,8 @@ class SODataSetExplorer:
         if total_value_counts:
             display_func(df[feature].value_counts().to_frame())
 
-            
-    def get_feature_dummies_per_year(self, feature: str, years=[], keep_features=[], remove_white_spaces=False):
+
+    def get_feature_dummies_per_year(self, feature: str, years=[], keep_features=[]):
         """
         Get dummies for multiple choice categorical features. The feature pass as argument should be defined a semicolon separeted string.
         Args:
@@ -196,11 +196,7 @@ class SODataSetExplorer:
         for year, df in self.datasets.items():
             if year not in years:
                 continue
-            if remove_white_spaces:
-                dummies_df = df[feature].str.split(';').str.join('|').str.replace(" ", "").str.get_dummies()
-            else:
-                dummies_df = df[feature].str.split(';').str.join('|').str.get_dummies()
-            for keep in keep_features:
-                dummies_df[keep] = df[keep]
-            feature_per_year_dummies[year] = dummies_df
+            # removing trailing white spaces with \s* and \s*' before getting dummies to avoid misleading feature repeatition
+            dummies_df = df[feature].str.split('\s*;\s*').str.join('|').str.get_dummies()
+            feature_per_year_dummies[year] = pd.concat([df[keep_features], dummies_df], axis=1)
         return feature_per_year_dummies
