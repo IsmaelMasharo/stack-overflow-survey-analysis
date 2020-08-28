@@ -1,8 +1,8 @@
 # Stack Overflow Survey Analysis
+Wrangling *Stack Overflow Survey Results* from 2011 till 2020. Taking a closer look to 3 main features: `top programming languages`, `job satisfaction`, and `developers' salaries`.  
+I published a post related to this analaysis on Medium and you can find it [here](https://medium.com/@ismaelmasharo/10-years-of-stack-overflow-surveys-c8ff3f662b2f).
 
-Wrangling *Stack Overflow Survey Results* from 2011 till 2020. I published a post related to this analaysis on Medium and you can find it [here](https://medium.com/@ismaelmasharo/10-years-of-stack-overflow-surveys-c8ff3f662b2f).
-
-### Datasets
+## Datasets
 - No dataset is attached within this repo since the size of the overall datasets exceeds github maximum repo size policies.
 - Original sources can be found [here](https://insights.stackoverflow.com/survey/)
 - Survey results from 2011 to 2015 are download and initially preprocesed using **OpenRefine**. The rest of the dataset is just directly download from source. All files are renamed with its associated *year* as suffix. 
@@ -24,10 +24,8 @@ Wrangling *Stack Overflow Survey Results* from 2011 till 2020. I published a pos
 ```
 
 
-### Initial Clean up steps
-Every step creates the input for the next step.
-
-1. OpenRefine: Etl operations - datasets from 2011 to 2015
+## Initial Clean up steps
+- OpenRefine: Etl operations - datasets from 2011 to 2015
     - Merge related columns → renaming
     - **Output:** 
         - `openrefine_operation_history`: json files describing etl transformations per survey dataset.
@@ -35,8 +33,7 @@ Every step creates the input for the next step.
     - To replicate datasets, load the original once into OpenRefine and apply the respective operation history json.
     
 
-### EDA
-
+## EDA
 * **datasets_exploration.ipynb**  
     Exploring similar features over the years, potential values normalization, feature types, etc.
 
