@@ -1,5 +1,5 @@
 # Stack Overflow Survey Analysis
-Wrangling *Stack Overflow Survey Results* from 2011 till 2020. Taking a closer look to 3 main features: `top programming languages`, `job satisfaction`, and `developers' salaries`.  
+Wrangling *Stack Overflow Survey Results* from 2011 till 2020. Taking a closer look to features like `top programming languages`, `job satisfaction`, and `developers' salaries`.  
 
 I published a post related to this analaysis on Medium and you can find it [here](https://medium.com/@ismaelmasharo/10-years-of-stack-overflow-surveys-c8ff3f662b2f).
 
