@@ -25,30 +25,39 @@ I published a post related to this analaysis on Medium and you can find it [here
 ```
 
 
-## Initial Clean up steps
-- OpenRefine: Etl operations - datasets from 2011 to 2015
-    - Merge related columns → renaming
-    - **Output:** 
-        - `openrefine_operation_history`: json files describing etl transformations per survey dataset.
-        - `stack_overflow_datasets`: csv files with the transformed survey datasets.
-    - To replicate datasets, load the original once into OpenRefine and apply the respective operation history json.
+### Initial clean up with OpenRefine
+Etl operations for datasets from 2011 to 2015.  
+- Base operations: merging and rename related columns
+- **Output:** 
+    - `openrefine_operation_history`: json files describing etl transformations per survey dataset.
+    - `stack_overflow_datasets`: csv files with the transformed survey datasets.
+- To replicate datasets, load the original once into OpenRefine and apply the respective operation history json.
     
 
-## EDA
+### EDA
+
 * **datasets_exploration.ipynb**  
     Exploring similar features over the years, potential values normalization, feature types, etc.
 
+
 * **programming_languages_eda.ipynb**  
-    Explores the programming languages over the years.  
-    Only languages present as options are beign analyzed. Other languages specified by the users are kept out.
-    
+    Explores the programming languages over the years.
+    - Only languages present as options are beign analyzed. 
+    - Other languages specified by the users are kept out.
+
+
 * **job_satisfaction_eda.ipynb**  
     Descriptive visualization comparing each year job satisfaction in a compeling way.  
-    Normalisation of values are performed per year dataset to consistenly standarize this feature. Only 5 categories are kept, ranging from `very satisfied` to `very dissatisfied`.
+    - Normalisation of values are performed per year dataset to consistenly standarize this feature. Only 5 categories are kept, ranging from `very satisfied` to `very dissatisfied`. 
+    - Mappings are located in `scripts/job_satisfaction_labeling.py`
+
 
 * **compensation_dev_type_eda.ipynb**  
     Analyzing compensation from 2017 onwards per each developer type.  
-    Compensation values are being cleaned up removing inter quartile outliers. The summaryze values may differ from the ones presented by the analysis of Stack Overflow since they applied other type of strategy for removing this outliers (mainly setting up threshold values around 200k).
+    - Compensation values are being cleaned up removing inter quartile outliers. 
+    - The summaryze values may differ from the ones presented by the analysis of Stack Overflow since they applied other type of strategy for removing this outliers (mainly setting up threshold values around 200k).
+
 
 * **categorical_corr.ipynb**  
-    Analyzing correlation between programming languages. Other categorical associations are performed using Theil's U analysis. 
+    Analyzing correlation between programming languages. 
+    - Categorical associations are performed using Theil's U analysis. 
