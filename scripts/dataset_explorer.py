@@ -6,18 +6,30 @@ from pprint import pprint
 
 class SODataSetExplorer:
     """
-    Helper for loading stackoverflow datasets
+    Helper class for loading stackoverflow datasets.
     """
     
     datasets = {}
     
     def __init__(self, years=[], format_col_names=True):
+        """
+        Class constructor.
+        Args:
+            - years: list of numbers representing years in the range [2011, 2020].
+            - format_col_names: boolean. If true formats dataset columns to snake case.
+        Return:
+            - SODataSetExplorer instance.
+        """
         self.datasets = self.load(years, format_col_names)
 
 
     def camel_to_snake(self, name: str):
         """
         Convert strings to snake case format
+        Args: 
+            - name: unformated string to be handled.
+        Return:
+            - None
         """
         # https://stackoverflow.com/a/1176023
         name = name.replace(' ', '_').replace("'", '').replace(':', '_').replace('?','')

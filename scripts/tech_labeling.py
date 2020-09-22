@@ -37,9 +37,9 @@ tech_labeling = {
     "cordova": "tech",
     "r": "language",
     "swift": "language",
-    "hadoop": "tech", # apache
+    "hadoop": "tech",
     "visual basic": "language",
-    "spark": "tech",  # apache
+    "spark": "tech",
     "cassandra": "db",
     "matlab": "language",
     "dart": "language",
@@ -51,21 +51,21 @@ tech_labeling = {
     "erlang": "language",
     "assembly": "language",
     "vb.net": "language",
-    "typescript": "language", # js
+    "typescript": "language",
     "lua": "language",
     "vba": "language",
-    "groovy": "language", # apache
+    "groovy": "language",
     "smalltalk": "language",
     "visual basic 6": "language",
     "common lisp": "language",
-    "julia": "language", # ds
-    "hack": "language", # fb, PHP dialect
-    "html": "language", # web
-    "bash": "language", # os
-    "shell": "language", # os
-    "kotlin": "language", # java, mobile
-    "cobol": "language",  # business oriented
-    "delphi": "language", # object pascal
+    "julia": "language",
+    "hack": "language",
+    "html": "language",
+    "bash": "language",
+    "shell": "language",
+    "kotlin": "language",
+    "cobol": "language",
+    "delphi": "language",
     "object pascal": "language",
     "ocaml": "language",
     "powershell": "tech",
