@@ -34,11 +34,12 @@ Etl operations for datasets from 2011 to 2015.
 - To replicate datasets, load the original once into OpenRefine and apply the respective operation history json.
     
 
+### Business and Data Understanding
+* **business_and_data_understanding.ipynb**  
+    Defining questions and data requirements. Exploring similar features over the years, potential values normalization, feature types, etc.
+
+
 ### EDA
-
-* **datasets_exploration.ipynb**  
-    Exploring similar features over the years, potential values normalization, feature types, etc.
-
 
 * **programming_languages_eda.ipynb**  
     Explores the programming languages over the years.
