@@ -34,31 +34,35 @@ Etl operations for datasets from 2011 to 2015.
 - To replicate datasets, load the original once into OpenRefine and apply the respective operation history json.
     
 
-### Business and Data Understanding
-* **business_and_data_understanding.ipynb**  
-    Defining questions and data requirements. Exploring similar features over the years, potential values normalization, feature types, etc.
+### Business Understanding
+* **features_exploration.ipynb**  
+    Spot features similarity and presence in surveys over years. Potential values normalization, feature types.
+
+* [**business_understanding.ipynb**](./business_understanding.ipynb)  
+    Defining questions and data requirements. Base features summary.
 
 
-### EDA
+### Data Understanding, Preparation and Evaluation
+Each of the following notebooks address a question defined in the Business Understanding stage. Sections per notebook are `data understanding`, `data preparation` and `evaluation`.
 
-* **programming_languages_eda.ipynb**  
+* [**programming_languages_eda.ipynb**](./programming_languages_eda.ipynb)  
     Explores the programming languages over the years.
     - Only languages present as options are beign analyzed. 
     - Other languages specified by the users are kept out.
 
 
-* **job_satisfaction_eda.ipynb**  
+* [**job_satisfaction_eda.ipynb**](./job_satisfaction_eda.ipynb)  
     Descriptive visualization comparing each year job satisfaction in a compeling way.  
     - Normalisation of values are performed per year dataset to consistenly standarize this feature. Only 5 categories are kept, ranging from `very satisfied` to `very dissatisfied`. 
     - Mappings are located in `scripts/job_satisfaction_labeling.py`
 
 
-* **compensation_dev_type_eda.ipynb**  
+* [**compensation_dev_type_eda.ipynb**](./compensation_dev_type_eda.ipynb)   
     Analyzing compensation from 2017 onwards per each developer type.  
     - Compensation values are being cleaned up removing inter quartile outliers. 
     - The summaryze values may differ from the ones presented by the analysis of Stack Overflow since they applied other type of strategy for removing this outliers (mainly setting up threshold values around 200k).
 
 
-* **categorical_corr.ipynb**  
+* [**categorical_corr.ipynb**](./categorical_corr.ipynb)  
     Analyzing correlation between programming languages. 
     - Categorical associations are performed using Theil's U analysis. 
