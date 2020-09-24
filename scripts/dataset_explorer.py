@@ -167,7 +167,7 @@ class SODataSetExplorer:
             - feature_per_year: displays just all the feature values present per year
             - total_value_counts: total count of each unique feature value independent of the year.
         Return:
-            - feature values per year dataframe. 
+            - None 
         """
         dataframes_with_column = [ 
             df[['year', feature]] for df in self.datasets.values() if feature in df.columns.tolist()
@@ -191,8 +191,6 @@ class SODataSetExplorer:
         if total_value_counts:
             display_func(df[feature].value_counts().to_frame())
             
-        return merged_df
-
 
     def get_feature_dummies_per_year(self, feature: str, years=[], keep_features=[]):
         """
