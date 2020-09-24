@@ -1,0 +1,12 @@
+numpy=1.19.1
+pandas=1.0.5
+scikit-learn=0.23.1
+scipy=1.5.2
+seaborn=0.10.1
+seaborn-base=0.10.1
+plotly=4.9.0
+plotly_express=0.4.1
+chart-studio=1.1.0
+matplotlib=3.3.0=1
+matplotlib-base=3.3.0
+dython=0.6.1
