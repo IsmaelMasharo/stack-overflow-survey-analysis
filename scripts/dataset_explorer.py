@@ -109,7 +109,7 @@ class SODataSetExplorer:
         df_to_compare_with = self.datasets
 
         if years:
-            df_to_compare_with = { year: dfs[year] for year in years }
+            df_to_compare_with = { year: self.datasets[year] for year in years }
         
         similar_per_year = {}
         for year, df in df_to_compare_with.items():
@@ -167,7 +167,7 @@ class SODataSetExplorer:
             - feature_per_year: displays just all the feature values present per year
             - total_value_counts: total count of each unique feature value independent of the year.
         Return:
-            - None
+            - None 
         """
         dataframes_with_column = [ 
             df[['year', feature]] for df in self.datasets.values() if feature in df.columns.tolist()
@@ -190,7 +190,7 @@ class SODataSetExplorer:
 
         if total_value_counts:
             display_func(df[feature].value_counts().to_frame())
-
+            
 
     def get_feature_dummies_per_year(self, feature: str, years=[], keep_features=[]):
         """
@@ -212,3 +212,15 @@ class SODataSetExplorer:
             dummies_df = df[feature].str.split('\s*;\s*').str.join('|').str.get_dummies()
             feature_per_year_dummies[year] = pd.concat([df[keep_features], dummies_df], axis=1)
         return feature_per_year_dummies
+    
+    
+    def missing_values_percentage(self, feature:str, years=[]):
+        years = years or list(self.datasets.keys())
+        feature_per_year = {}
+        for year, df in self.datasets.items():
+            if year not in years:
+                continue
+            if feature not in df.columns.tolist():
+                continue
+            feature_per_year[year] = df[feature].isna().mean()
+        return pd.DataFrame(feature_per_year.items(), columns=['year', feature])
